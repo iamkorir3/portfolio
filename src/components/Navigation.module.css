@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  color: white;
+  box-shadow: 4px rgba(0, 0, 0, 0.8);
+}
+
+.navlinks {
+  display: flex;
+  color: black;
+  gap: 2rem;
+  list-style: none;
+  background-color: white;
+  padding: 2rem;
+}
+.navlinks li {
+  color: black;
+  font-size: 2rem;
+}

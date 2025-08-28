@@ -1,25 +1,26 @@
-// import { p } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import styles from "./Navigation.module.css";
 export default function Navigation() {
   return (
-    <div>
-      <ul>
+    <div className={styles.container}>
+      <ul className={styles.navlinks}>
         <li>
-          <p to="">Home</p>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <p to="">About</p>
+          <NavLink to="/about">About</NavLink>
         </li>
         <li>
-          <p to="">Projects</p>
+          <NavLink to="/Projects">Projects</NavLink>
         </li>
         <li>
-          <p to="">Skills</p>
+          <NavLink to="/Skills">Skills</NavLink>
         </li>
         <li>
-          <p to="">Testimonials</p>
+          <NavLink to="/testimonials">Testimonials</NavLink>
         </li>
         <li>
-          <p to="">Contact</p>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
     </div>
