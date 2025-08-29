@@ -9,12 +9,17 @@
 }
 .navlinks {
   display: grid;
-  grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr 1.4fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1.4fr 1fr;
   text-decoration: none;
   padding: 0;
   align-items: center;
   width: 90%;
   margin: 0 auto;
+}
+.navlinks p {
+  /* padding-right: 6rem; */
+  font-weight: 700;
+  font-size: 3.6rem;
 }
 .navlinks li {
   font-weight: 700;

@@ -4,11 +4,10 @@ export default function Navigation() {
   return (
     <div className={styles.container}>
       <ul className={styles.navlinks}>
-        <li>
-          <p to="">
-            <ion-icon name="code-slash"></ion-icon> My Portfolio{" "}
-          </p>
-        </li>
+        <p to="">
+          <ion-icon name="code-slash"></ion-icon> My Portfolio{" "}
+        </p>
+
         <li>
           <NavLink to="/">
             <ion-icon name="home"></ion-icon> Home
