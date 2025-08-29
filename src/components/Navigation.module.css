@@ -1,18 +1,46 @@
 .container {
   display: flex;
-  color: white;
-  box-shadow: 4px rgba(0, 0, 0, 0.8);
-}
-
-.navlinks {
-  display: flex;
-  color: black;
-  gap: 2rem;
-  list-style: none;
+  background-color: rgba(232, 233, 239, 0.936);
   background-color: white;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+.navlinks {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr 1.4fr 1fr;
+  text-decoration: none;
+  padding: 0;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
 }
 .navlinks li {
-  color: black;
-  font-size: 2rem;
+  font-weight: 700;
+  font-size: 3.2rem;
+  list-style: none;
+  padding-left: 2rem;
+  text-decoration: none;
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+}
+
+.navlinks a:global(.active) {
+  color: whitesmoke;
+  color: blue;
+  padding: 0.5rem 0.8rem;
+  /* border-radius: 10px; */
+  text-decoration: underline red;
+  /* background-color: rgba(19, 19, 66, 0.938); */
+}
+.navlinks a:global(.hydrated) {
+  color: white;
+}
+
+ion-icon {
+  color: #333;
+  font-size: 2.8rem;
+  transition: all 0.3s ease;
 }

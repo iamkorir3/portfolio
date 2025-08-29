@@ -1,6 +1,9 @@
+import Navigation from "../components/Navigation";
+import styles from "./Home.module.css";
 function Home() {
   return (
-    <div>
+    <div className={styles.container}>
+      <Navigation />
       <h1>my home</h1>
     </div>
   );
