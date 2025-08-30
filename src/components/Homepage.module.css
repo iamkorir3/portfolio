@@ -1,11 +1,12 @@
 .container {
   width: 90%;
-  margin: 2rem auto;
+  margin: 0 auto;
+  margin-top: 4rem;
   display: flex;
 }
 
 .detailContainer {
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
   width: 50%;
   padding-top: 3rem;
 }
@@ -26,9 +27,9 @@
   /* background-color: whitesmoke; */
 }
 
-.profile img {
-  width: 90%;
-  aspect-ratio: 1/0.85;
+.myImg {
+  width: 70%;
+  margin: 0 auto !important;
   border-radius: 50%;
 }
 
@@ -45,11 +46,66 @@
 
 .socialLinks {
   display: flex;
+  /* position: absolute; */
+  gap: 2rem;
+}
+
+.socialLinks ion-icon {
+  color: rgb(27, 27, 55);
+  font-size: 4rem;
+}
+
+/* CTA BUTTONS */
+.ctaBtn {
+  display: flex;
+  gap: 4rem;
+  margin-top: 6rem;
+}
+
+.ctaBtn button {
+  width: fit-content;
+  font-size: 2.4rem;
+  padding: 2rem 1.4rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.ctaBtn :first-child {
+  background-color: rgb(27, 27, 55);
+  color: white;
+}
+
+/* .quickStats */
+.quickStats {
+  margin-top: 2rem;
+}
+
+.quickStats div p {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 2rem;
+  background-color: rgb(27, 27, 55);
+  width: fit-content;
+  color: white;
+  line-height: 2rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  border-radius: 3rem;
+  text-align: center;
+}
+.quickStats div {
+  display: flex;
   gap: 1rem;
 }
 
-.js {
-  color: red;
-  display: inline-block;
-  position: absolute;
+.quickStats p span {
+  font-size: 2rem;
+  color: whitesmoke;
+  font-weight: normal;
+}
+
+.quickStats p ion-icon {
+  margin: auto;
+  color: white;
 }
