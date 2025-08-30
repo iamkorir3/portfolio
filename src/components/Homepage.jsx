@@ -32,6 +32,12 @@ function PictureSkills() {
   return (
     <div className={styles.profile}>
       <img src="/me3.jpg" alt="my pic" />
+      <div className={styles.js}>
+        <ion-icon name="logo-nodejs"></ion-icon>
+      </div>
+      <ion-icon name="logo-css3"></ion-icon>
+      <ion-icon name="logo-react"></ion-icon>
+      <ion-icon name="logo-html5"></ion-icon>
     </div>
   );
 }
@@ -40,6 +46,12 @@ function SocialProfiles() {
   return (
     <div className={styles.SocialProfiles}>
       <p>Follow me on: </p>
+      <div className={styles.socialLinks}>
+        <ion-icon name="logo-github"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </div>
     </div>
   );
 }

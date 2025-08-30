@@ -33,9 +33,23 @@
 }
 
 .SocialProfiles {
+  display: flex;
+  margin: 2rem 0;
+  align-items: center;
+  gap: 2rem;
 }
 
 .SocialProfiles p {
   font-weight: bold;
-  margin: 2rem 0;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.js {
+  color: red;
+  display: inline-block;
+  position: absolute;
 }
