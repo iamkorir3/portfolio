@@ -30,43 +30,55 @@ function Mydetails() {
       <div className={styles.ctaBtn}>
         <button>
           <span>
-            <ion-icon name="arrow-down-circle-outline"></ion-icon>
+            <ion-icon name="caret-down-circle"></ion-icon>
           </span>{" "}
           Explore My Projects
         </button>
         <button>
           <span>
-            <ion-icon name="mail-outline"></ion-icon>
+            <ion-icon name="mail"></ion-icon>
           </span>{" "}
           Download my CV
         </button>
       </div>
 
       <div className={styles.quickStats}>
-        <p>
+        <div className={styles.quickStatstitle}>
           <span>
             <ion-icon name="stats-chart"></ion-icon>
           </span>
           Quick stats
-        </p>
-        <div>
-          <p>
-            <p> 1+ years</p>
+        </div>
+        <div className={styles.quickStat}>
+          <section style={{ flexDirection: "row" }}>
+            <div>
+              <ion-icon name="bar-chart"></ion-icon>{" "}
+            </div>
+            <div>
+              <p> 1+ Years</p>
+              <span>Experience</span>
+            </div>
+          </section>
 
-            <span>Experience</span>
-          </p>
-          <p>
-            <ion-icon name="logo-nodejs"></ion-icon>
-            <p>
+          <section style={{ flexDirection: "row" }}>
+            <div>
+              <ion-icon name="logo-nodejs"></ion-icon>
+            </div>
+
+            <div>
               <p>Javascript</p>
-              <span>main languge</span>
-            </p>
-          </p>
-          <p>
-            <p>5 projects</p>
-
-            <span>main projects</span>
-          </p>
+              <span>Main languge</span>
+            </div>
+          </section>
+          <section style={{ flexDirection: "row" }}>
+            <div>
+              <ion-icon name="code-slash"></ion-icon>
+            </div>
+            <div>
+              <p>5 Projects</p>
+              <span>Main projects</span>
+            </div>
+          </section>
         </div>
       </div>
     </div>
@@ -101,8 +113,8 @@ function PictureSkills() {
       <div>
         <img className={styles.myImg} src="/me5.png" alt="my pic" />
       </div>
-      <div>
-        <Link className={styles.js}>
+      <div className={styles.js}>
+        <Link>
           <ion-icon name="logo-nodejs"></ion-icon>
         </Link>
 

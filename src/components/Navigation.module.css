@@ -33,14 +33,13 @@
 }
 
 .navlinks a:global(.active) {
-  color: whitesmoke;
-  color: blue;
+  color: white;
   padding: 0.5rem 0.8rem;
-  /* border-radius: 10px; */
-  text-decoration: underline red;
-  /* background-color: rgba(19, 19, 66, 0.938); */
+  border-radius: 10px;
+  background-color: rgb(27, 27, 55);
 }
-.navlinks a:global(.hydrated) {
+
+.navlinks a:global(.active) ion-icon {
   color: white;
 }
 

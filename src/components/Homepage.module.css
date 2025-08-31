@@ -24,12 +24,14 @@
 }
 .profile {
   width: 50%;
+  position: relative;
   /* background-color: whitesmoke; */
 }
 
 .myImg {
   width: 70%;
-  margin: 0 auto !important;
+  display: flex;
+  margin: auto !important;
   border-radius: 50%;
 }
 
@@ -46,7 +48,6 @@
 
 .socialLinks {
   display: flex;
-  /* position: absolute; */
   gap: 2rem;
 }
 
@@ -54,7 +55,47 @@
   color: rgb(27, 27, 55);
   font-size: 4rem;
 }
+/* *******************
+Language icons
+ */
 
+.js ion-icon {
+  font-size: 5rem;
+  position: absolute;
+}
+
+.js :first-child ion-icon {
+  fill: rgb(255, 255, 10);
+  top: 3rem;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: rgb(27, 27, 55);
+}
+.js :nth-child(2) ion-icon {
+  fill: rgb(233, 20, 216);
+  right: 10rem;
+  top: 48rem;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: rgb(27, 27, 55);
+}
+.js :nth-child(3) ion-icon {
+  fill: white;
+  stroke-width: 1rem;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: rgb(27, 27, 55);
+
+  top: 3rem;
+  right: 8rem;
+}
+.js :last-child ion-icon {
+  fill: orange;
+  top: 50rem;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: rgb(27, 27, 55);
+}
 /* CTA BUTTONS */
 .ctaBtn {
   display: flex;
@@ -75,17 +116,63 @@
   background-color: rgb(27, 27, 55);
   color: white;
 }
-
+.ctaBtn :nth-child(2) ion-icon {
+  background-color: white !important;
+  color: rgb(27, 27, 55);
+}
 /* .quickStats */
 .quickStats {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
-.quickStats div p {
+.quickStatstitle {
+  font-size: 3.2rem;
+  display: flex;
+  gap: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.quickStat {
+  display: flex;
+  gap: 2rem;
+}
+
+.quickStat section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgb(27, 27, 55);
+  color: white;
+}
+
+.quickStat section {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.quickStat section ion-icon {
+  color: white;
+}
+
+.quickStat section p {
+  color: white;
+}
+.quickStat section span {
+  color: white;
+  font-size: 2rem;
+}
+
+/* 
+.quickStats div {
+  display: flex;
+  gap: 1rem;
+}
+
+.quickStats div div p {
   display: flex;
   flex-direction: column;
   padding: 0.4rem 2rem;
-  background-color: rgb(27, 27, 55);
   width: fit-content;
   color: white;
   line-height: 2rem;
@@ -94,12 +181,8 @@
   border-radius: 3rem;
   text-align: center;
 }
-.quickStats div {
-  display: flex;
-  gap: 1rem;
-}
 
-.quickStats p span {
+.quickStat div p span {
   font-size: 2rem;
   color: whitesmoke;
   font-weight: normal;
@@ -108,4 +191,4 @@
 .quickStats p ion-icon {
   margin: auto;
   color: white;
-}
+} */
