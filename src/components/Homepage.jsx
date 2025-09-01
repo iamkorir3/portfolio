@@ -14,7 +14,7 @@ function Mydetails() {
     <div className={styles.detailContainer}>
       <h1>
         {" "}
-        Hi, I Am Korir <br />
+        Hi, I am Korir <br />
         Emmanuel
       </h1>
       <h2>Frontend Developer</h2>

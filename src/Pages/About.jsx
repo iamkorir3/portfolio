@@ -5,7 +5,6 @@ export default function About() {
     <div>
       <Navigation />
       <Aboutcompo />
-      <h1>about me</h1>
     </div>
   );
 }
