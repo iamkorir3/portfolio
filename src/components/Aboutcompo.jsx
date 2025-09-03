@@ -43,6 +43,28 @@ function InfoMe() {
           </p>
         </div>
       </div>
+
+      <div>
+        <h2>Personal Information</h2>
+        <p>
+          Name<span>Korir Emmanuel</span>
+        </p>
+        <p>
+          place of birth<span>Bomet</span>
+        </p>
+        <p>
+          phone<span>+254 712473905</span>
+        </p>
+        <p>
+          Date of birth<span></span>
+        </p>
+        <p>
+          Emai<span>iamkorir705@gmail.com</span>
+        </p>
+        <p>
+          Education<span> Meru University of Science and Technoly</span>
+        </p>
+      </div>
     </>
   );
 }
