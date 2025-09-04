@@ -5,31 +5,68 @@
   display: flex;
 }
 
-.myInfo {
-  display: flex;
-  width: 50%;
-  gap: 6rem;
-  margin-top: 3%;
-}
 .imgContainer {
-  width: 50%;
+  width: 100%;
 }
 .myImg {
   width: 60%;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   display: flex;
-
   border: 2px whitesmoke;
   margin: auto;
-  margin-top: 16%;
+  margin-top: 12%;
 }
 
+.myInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 6rem;
+  margin-top: 5%;
+}
+.infoTitle h2 {
+  font-size: 4.8rem;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.infoTitle p {
+  font-size: 2.8rem;
+  opacity: 50%;
+  width: fit-content;
+  margin: 0 auto;
+}
 .myInfo h2 {
   font-size: 3.6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .myInfo p {
   font-size: 2.6rem;
-  line-height: 3.6rem;
+  line-height: 3.8rem;
+}
+/* *********
+personalInfo
+******** */
+.personalInfo {
+  margin-top: 6rem;
+}
+
+.personalInfo h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.myPersonalInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  font-size: 2.4rem;
+}
+
+.myPersonalInfo p {
+  font-weight: 580;
+}
+
+.myPersonalInfo p span {
+  font-weight: normal;
 }
