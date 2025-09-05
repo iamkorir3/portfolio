@@ -1,0 +1,12 @@
+.container {
+  width: 60%;
+  height: 80vh;
+  margin: 0 auto;
+  margin-top: 4rem;
+  overflow-y: scroll;
+  display: flex;
+  border: 0px 3px;
+  border: 2px solid black;
+  border-bottom: 0;
+  border-top: 0;
+}

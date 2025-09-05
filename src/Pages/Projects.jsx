@@ -1,10 +1,12 @@
 import Navigation from "../components/Navigation";
+import styles from "./Projects.module.css";
+import Myprojects from "../components/Myprojects";
 
 function Projects() {
   return (
-    <div>
+    <div className={styles.container}>
       <Navigation />
-      <h1>My projects</h1>
+      <Myprojects />
     </div>
   );
 }

@@ -73,6 +73,12 @@ function InfoMe() {
           </p>
         </div>
       </div>
+      <button className={styles.btnResume}>
+        <span>
+          <ion-icon name="mail"></ion-icon>
+        </span>{" "}
+        Download My Resume
+      </button>
     </div>
   );
 }
