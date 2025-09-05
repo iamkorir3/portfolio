@@ -1,5 +1,5 @@
 .container {
-  width: 60%;
+  width: 70%;
   height: 80vh;
   margin: 0 auto;
   margin-top: 4rem;
@@ -9,4 +9,26 @@
   border: 2px solid black;
   border-bottom: 0;
   border-top: 0;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.projectsCard {
+  max-width: 100rem;
+  border-radius: 1rem;
+  aspect-ratio: 3.6/2;
+  background-color: whitesmoke;
+}
+
+.projectsCard h2 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-top: 1rem;
 }
