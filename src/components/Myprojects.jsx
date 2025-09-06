@@ -12,54 +12,32 @@ export default function Myprojects() {
 function Projects() {
   return (
     <div className={styles.projects}>
-      <ProjectCard>
-        <h2>WorldWise</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum odio
-          cupiditate et exercitationem! Veniam asperiores culpa fuga sed ipsum,
-          .
-        </p>
-      </ProjectCard>
-      <ProjectCard>
-        <h2>Ecommerce</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum odio
-          cupiditate et exercitationem! Veniam asperiores culpa fuga sed ipsum,
-          .
-        </p>
-      </ProjectCard>
-      <ProjectCard>
-        <h2>UsePopcorn</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum odio
-          cupiditate et exercitationem! Veniam asperiores culpa fuga sed ipsum,
-          .
-        </p>
-      </ProjectCard>
-      <ProjectCard>
-        <h2>React Quiz</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum odio
-          cupiditate et exercitationem! Veniam asperiores culpa fuga sed ipsum,
-          .
-        </p>
-      </ProjectCard>
-      <ProjectCard>
-        <h2>Eat and Split</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum odio
-          cupiditate et exercitationem! Veniam asperiores culpa fuga sed ipsum,
-          .
-        </p>
-      </ProjectCard>
-      <ProjectCard>
-        <h2>To Do List</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum odio
-          cupiditate et exercitationem! Veniam asperiores culpa fuga sed ipsum,
-          .
-        </p>
-      </ProjectCard>
+      <>
+        <ProjectCard>
+          <p></p>
+          <h2>WorldWise</h2>
+        </ProjectCard>
+        <ProjectCard>
+          <p></p>
+          <h2>Ecommerce</h2>
+        </ProjectCard>
+        <ProjectCard>
+          <p></p>
+          <h2>UsePopcorn</h2>
+        </ProjectCard>
+        <ProjectCard>
+          <p></p>
+          <h2>React Quiz</h2>
+        </ProjectCard>
+        <ProjectCard>
+          <p></p>
+          <h2>Eat and Split</h2>
+        </ProjectCard>
+        <ProjectCard className={styles.toDolist}>
+          <p></p>
+          <h2>To Do List</h2>
+        </ProjectCard>
+      </>
     </div>
   );
 }

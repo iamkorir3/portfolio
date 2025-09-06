@@ -25,8 +25,39 @@
   border-radius: 1rem;
   aspect-ratio: 3.6/2;
   background-color: whitesmoke;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+.projectsCard::before {
+  filter: blur(10px);
+}
+
+.projects :first-child {
+  background-image: url("/worldwise.png");
+}
+
+.projects :nth-child(3) {
+  background-image: url("/usepop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects :nth-child(3) {
+  background-image: url("/usepop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects :nth-child(3) {
+  background-image: url("/usepop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .projectsCard h2 {
   font-size: 3.2rem;
   text-align: center;
