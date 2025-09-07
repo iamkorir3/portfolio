@@ -1,7 +1,7 @@
 import Navigation from "../components/Navigation";
 import Mytestimonial from "../components/Mytestimonial";
 
-function Testimonials() {
+export default function Testimonials() {
   return (
     <div>
       <Navigation />
@@ -10,5 +10,3 @@ function Testimonials() {
     </div>
   );
 }
-
-export default Testimonials;
