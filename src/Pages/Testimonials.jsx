@@ -1,10 +1,12 @@
 import Navigation from "../components/Navigation";
+import Mytestimonial from "../components/Mytestimonial";
 
 function Testimonials() {
   return (
     <div>
       <Navigation />
-      <h1>Testimonials</h1>
+      <Mytestimonial />
+      {/* <h1>Testimonials</h1> */}
     </div>
   );
 }
