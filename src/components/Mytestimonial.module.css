@@ -1,6 +1,6 @@
 .container {
   width: 80%;
-  height: 80vh;
+  /* height: 80vh; */
   margin: 0 auto;
   margin-top: 4rem;
   display: flex;
@@ -21,8 +21,16 @@
 
 .tesiCard {
   width: 60%;
-  height: 75vh;
-  border: 2px solid purple;
+  height: 70vh;
   margin: 0 auto;
   overflow-y: scroll;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.personCard {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 20rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }

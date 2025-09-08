@@ -17,6 +17,17 @@ export default function Mytestimonial() {
 function TestimonialCard() {
   return (
     <div className={styles.tesiCard}>
+      <PersonCard />
+      <PersonCard />
+      <PersonCard />
+      <PersonCard />
+    </div>
+  );
+}
+
+function PersonCard() {
+  return (
+    <div className={styles.personCard}>
       <h2>Name: korir emmanuel</h2>
     </div>
   );
