@@ -104,3 +104,48 @@
   margin-top: 1rem;
   top: 1rem;
 }
+
+/* Testimonial Form */
+
+.form {
+  position: absolute;
+  left: 37.5%;
+  top: 25vh;
+  width: 25%;
+  margin: 0 auto;
+  height: fit-content;
+  background-color: whitesmoke;
+}
+
+.myform {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+}
+.myform div {
+  display: flex;
+  flex-direction: column;
+}
+.myform div input {
+  border: 1px solid rgba(0, 0, 0, 0.164);
+  height: 4rem;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  font-size: 2rem;
+}
+
+.myform div label {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.formBtn {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  gap: 10rem;
+}
+
+.formBtn button {
+  width: fit-content;
+}

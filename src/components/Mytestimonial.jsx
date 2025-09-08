@@ -11,6 +11,7 @@ export default function Mytestimonial() {
       </div>
       <AddTestimonial />
       <TestimonialCard />
+      <Form />
     </div>
   );
 }
@@ -68,5 +69,30 @@ function PersonCard() {
 // Testimonial Form
 
 function Form() {
-  return;
+  return (
+    <div className={styles.form}>
+      <form className={styles.myform}>
+        <div>
+          <label>Full Name</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email" />
+        </div>
+        <div>
+          <label>Position</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>Testimonial</label>
+          <input type="text" />
+        </div>
+        <div className={styles.formBtn}>
+          <button>Cancel</button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  );
 }
