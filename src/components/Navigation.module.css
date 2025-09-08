@@ -23,7 +23,7 @@
 }
 .navlinks li {
   font-weight: 600;
-  opacity: 80%;
+  opacity: 90%;
   font-size: 2.8rem;
   list-style: none;
   padding-left: 2rem;
@@ -37,7 +37,6 @@
   color: white;
   padding: 0.5rem 0.8rem;
   border-radius: 10px;
-  background-color: rgb(27, 27, 55);
   background-color: rgb(14, 14, 30);
 }
 

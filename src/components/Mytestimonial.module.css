@@ -9,7 +9,7 @@
 
 .tesiHeader {
   text-align: center;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
 }
 .tesiHeader h2 {
   font-size: 4.2rem;
@@ -20,17 +20,87 @@
 }
 
 .tesiCard {
-  width: 60%;
-  height: 70vh;
-  margin: 0 auto;
   overflow-y: scroll;
+  width: 65%;
+  height: 65vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.review h3 {
+  font-size: 2rem;
+}
+.review p {
+  font-size: 1.8rem;
+  margin: 1.4rem 0;
 }
 
 .personCard {
   background-color: whitesmoke;
-  width: 100%;
-  height: 20rem;
+  width: 95%;
+  height: fit-content;
+  margin: 0 auto;
   margin-bottom: 2rem;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.testifier {
+  align-self: baseline;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.242);
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.testifier h2 {
+  font-size: 2rem;
+}
+
+.testifier p {
+  font-size: 1.6rem;
+}
+.nameInitials {
+  padding: 2rem;
+  width: fit-content;
+  font-size: 2rem;
+  border: 2px dotted rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+
+.testmonialBtn {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  background-color: white;
+}
+
+.testmonialBtn h3 {
+  font-size: 2.8rem;
+}
+.testmonialBtn button {
+  padding: 1.4rem 2rem;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  background-color: rgba(9, 235, 9, 0.855);
+  background-color: rgb(38, 38, 79);
+}
+
+.testmonialBtn button ion-icon {
+  color: white;
+  padding: 0;
+  margin-top: 1rem;
+  top: 1rem;
 }
