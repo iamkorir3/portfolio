@@ -1,5 +1,11 @@
+import { useState } from "react";
 import styles from "./Mytestimonial.module.css";
 export default function Mytestimonial() {
+  const [addTestimony, setaddTestimony] = useState(false);
+
+  function handleAddTestimony() {
+    setaddTestimony(true);
+  }
   return (
     <div className={styles.container}>
       <div className={styles.tesiHeader}>
@@ -9,9 +15,9 @@ export default function Mytestimonial() {
           experienced my work.
         </p>
       </div>
-      <AddTestimonial />
+      <AddTestimonial onAddtest={handleAddTestimony} />
       <TestimonialCard />
-      <Form />
+      {addTestimony && <Form />}
     </div>
   );
 }
@@ -27,13 +33,13 @@ function TestimonialCard() {
     </div>
   );
 }
-function AddTestimonial() {
+function AddTestimonial({ onAddtest }) {
   return (
     <div className={styles.testmonialBtn}>
       <h3>
         <ion-icon name="mail-outline"></ion-icon> Testimonials
       </h3>
-      <button>
+      <button onClick={onAddtest}>
         + {/* <ion-icon name="add-circle-outline"></ion-icon> */}
         Add Testimonial
       </button>

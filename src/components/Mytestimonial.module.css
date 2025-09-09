@@ -115,6 +115,8 @@
   margin: 0 auto;
   height: fit-content;
   background-color: whitesmoke;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  border: white;
 }
 
 .myform {
@@ -143,9 +145,14 @@
   display: grid !important;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
-  gap: 10rem;
+  gap: 7rem;
 }
 
 .formBtn button {
-  width: fit-content;
+  max-width: 17rem;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.353);
+  font-weight: bold;
+  background-color: white;
 }
