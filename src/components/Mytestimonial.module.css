@@ -94,7 +94,6 @@
   border: none;
   color: white;
   border-radius: 6px;
-  background-color: rgba(9, 235, 9, 0.855);
   background-color: rgb(38, 38, 79);
 }
 
@@ -119,6 +118,28 @@
   border: white;
 }
 
+.formHeader {
+  text-align: center;
+  width: fit-content;
+  margin: 1rem auto;
+}
+.formHeader h2,
+h3 {
+  font-size: 2.4rem;
+}
+
+.formHeader p {
+  font-size: 1.8rem;
+}
+
+.formHeader h2 {
+  padding: 1rem;
+  /* width: fit-content; */
+  /* display: flex; */
+  background-color: rgb(38, 38, 79);
+  margin: 0.5 auto;
+  align-self: center;
+}
 .myform {
   display: flex;
   flex-direction: column;
@@ -139,6 +160,7 @@
 .myform div label {
   font-size: 2.2rem;
   font-weight: bold;
+  margin: 0.5rem;
 }
 
 .formBtn {
@@ -155,4 +177,9 @@
   border: 1px solid rgba(0, 0, 0, 0.353);
   font-weight: bold;
   background-color: white;
+}
+
+.formBtn :nth-child(2) {
+  background-color: rgb(38, 38, 79);
+  color: white;
 }
