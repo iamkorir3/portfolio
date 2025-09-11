@@ -82,9 +82,9 @@ function AddTestimonial({ onAddtest }) {
   );
 }
 
-function PersonCard({ email, name, position, testimony }) {
-  //   console.log(`${email} hello`);
-  //   const { name, position, testimony } = testifier;
+function PersonCard({ person }) {
+  const { name, position, testimony } = person;
+
   return (
     <div className={styles.personCard}>
       <div className={styles.review}>
@@ -102,7 +102,7 @@ function PersonCard({ email, name, position, testimony }) {
         <div className={styles.nameInitials}>KE</div>
         <div>
           <h2>{name}</h2>
-          <p>{email}</p>
+
           <p>
             {/* designation */}
             {position}
@@ -122,6 +122,11 @@ function Form({ onsubmit }) {
   const [position, setpos] = useState("");
   const [testimony, settestimony] = useState("");
 
+  //   function handleName(value) {
+  //     setname(value);
+  //     console.log(value);
+  //   }
+
   function handleSubmision(e) {
     e.preventDefault();
     onsubmit(mytestifier);
@@ -129,10 +134,10 @@ function Form({ onsubmit }) {
   }
 
   const mytestifier = {
-    name: name,
-    email: email,
-    position: position,
-    testimony: testimony,
+    name,
+    email,
+    position,
+    testimony,
   };
 
   return (
@@ -149,7 +154,7 @@ function Form({ onsubmit }) {
             <input
               type="text"
               value={name}
-              onChange={(e) => setname(e.value)}
+              onChange={(e) => setname(e.target.value)}
             />
           </div>
           <div>
@@ -164,7 +169,7 @@ function Form({ onsubmit }) {
             <label>Position</label>
             <input
               type="text"
-              value={position}
+              //   value={position}
               onChange={(e) => setpos(e.value)}
             />
           </div>
@@ -172,7 +177,7 @@ function Form({ onsubmit }) {
             <label>Testimonial</label>
             <input
               type="text"
-              value={testimony}
+              //   value={testimony}
               onChange={(e) => settestimony(e.value)}
             />
           </div>
