@@ -122,18 +122,30 @@ function Form({ onsubmit }) {
   const [position, setpos] = useState("");
   const [testimony, settestimony] = useState("");
 
-  //   function handleName(value) {
-  //     setname(value);
-  //     console.log(value);
-  //   }
+  function handleName(value) {
+    setname(value);
+    console.log(value);
+  }
+  function handleEmail(value) {
+    setemail(value);
+    console.log(value);
+  }
+  function handlepos(value) {
+    setpos(value);
+    console.log(value);
+  }
+  function handletestimony(value) {
+    settestimony(value);
+    console.log(value);
+  }
 
   function handleSubmision(e) {
     e.preventDefault();
     onsubmit(mytestifier);
-    // return { ...testifier, name, email, position, testimony };
+    return { ...mytestifier, name, email, position, testimony };
   }
 
-  const mytestifier = {
+  let mytestifier = {
     name,
     email,
     position,
@@ -150,40 +162,41 @@ function Form({ onsubmit }) {
         </div>
         <form className={styles.myform}>
           <div>
-            <label>Full Name</label>
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setname(e.target.value)}
-            />
-          </div>
-          <div>
             <label>Email</label>
             <input
               type="email"
               value={email}
-              onChange={(e) => setemail(e.value)}
+              onChange={(e) => handleEmail(e.value)}
             />
           </div>
+          <div>
+            <label>Full Name</label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => handleName(e.target.value)}
+            />
+          </div>
+
           <div>
             <label>Position</label>
             <input
               type="text"
-              //   value={position}
-              onChange={(e) => setpos(e.value)}
+              value={position}
+              onChange={(e) => handlepos(e.value)}
             />
           </div>
           <div>
             <label>Testimonial</label>
             <input
               type="text"
-              //   value={testimony}
-              onChange={(e) => settestimony(e.value)}
+              value={testimony}
+              onChange={(e) => handletestimony(e.value)}
             />
           </div>
           <div className={styles.formBtn}>
             <button>Cancel</button>
-            <button type="submit" onClick={(e) => handleSubmision(e)}>
+            <button type="submit" onSubmit={(e) => handleSubmision(e)}>
               Submit
             </button>
           </div>
