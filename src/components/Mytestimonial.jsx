@@ -19,12 +19,12 @@ const test = [
 ];
 const testifieer = {
   name: "Emamnuel ",
-  email: "",
+  email: "manu@gmail",
   position: "dev",
   testimony: "great",
 };
 export default function Mytestimonial() {
-  const [testifiers, setTestifier] = useState([]);
+  const [testifiers, setTestifier] = useState([test]);
   const [testif, settestif] = useState({ testifieer });
   console.log(test);
 
@@ -59,9 +59,29 @@ export default function Mytestimonial() {
 
 function TestimonialCard({ testifiers }) {
   console.log(testifiers);
+  const test = [
+    {
+      name: "Emamnuel korir",
+      email: "2",
+      position: "lec",
+      testimony: "good",
+      id: 1,
+    },
+    {
+      name: "Emamnuel ",
+      email: "1",
+      position: "dev",
+      testimony: "great",
+      id: 2,
+    },
+  ];
   return (
     <div className={styles.tesiCard}>
       {testifiers.map((person, index) => (
+        <PersonCard person={person} key={index} />
+      ))}
+      ;
+      {test.map((person, index) => (
         <PersonCard person={person} key={index} />
       ))}
       ;
@@ -124,10 +144,10 @@ function Form({ onsubmit }) {
   const [mytestimony, settestimony] = useState("");
 
   const [mytestifier, setmytestifier] = useState({
-    name: "",
-    email: "",
-    position: "",
-    testimony: "",
+    name: "manuu",
+    email: "mnue@gnia",
+    position: "web dev",
+    testimony: "testing",
   });
 
   function handleName(value) {
@@ -145,7 +165,6 @@ function Form({ onsubmit }) {
 
   function handleSubmision(e) {
     e.preventDefault();
-    console.log(e);
     setmytestifier({
       ...mytestifier,
       name: myname,
@@ -154,9 +173,9 @@ function Form({ onsubmit }) {
       testimony: mytestimony,
     });
     onsubmit(mytestifier);
+    console.log(mytestifier);
+    console.log({ myname, myemail });
   }
-
-  console.log(mytestifier);
 
   return (
     <>
@@ -166,7 +185,7 @@ function Form({ onsubmit }) {
           <h3>Share Your Testimony</h3>
           <p>Comment on your experience working with me.</p>
         </div>
-        <form className={styles.myform}>
+        <form className={styles.myform} onSubmit={(e) => handleSubmision(e)}>
           <div>
             <label>Full Name</label>
             <input
@@ -201,9 +220,7 @@ function Form({ onsubmit }) {
           </div>
           <div className={styles.formBtn}>
             <button>Cancel</button>
-            <button type="submit" onClick={(e) => handleSubmision(e)}>
-              Submit
-            </button>
+            <button type="submit">Submit</button>
           </div>
         </form>
       </div>
