@@ -162,14 +162,6 @@ function Form({ onsubmit }) {
         </div>
         <form className={styles.myform}>
           <div>
-            <label>Email</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => handleEmail(e.value)}
-            />
-          </div>
-          <div>
             <label>Full Name</label>
             <input
               type="text"
@@ -177,13 +169,20 @@ function Form({ onsubmit }) {
               onChange={(e) => handleName(e.target.value)}
             />
           </div>
-
+          <div>
+            <label>Email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => handleEmail(e.target.value)}
+            />
+          </div>
           <div>
             <label>Position</label>
             <input
               type="text"
               value={position}
-              onChange={(e) => handlepos(e.value)}
+              onChange={(e) => handlepos(e.target.value)}
             />
           </div>
           <div>
@@ -191,7 +190,7 @@ function Form({ onsubmit }) {
             <input
               type="text"
               value={testimony}
-              onChange={(e) => handletestimony(e.value)}
+              onChange={(e) => handletestimony(e.target.value)}
             />
           </div>
           <div className={styles.formBtn}>
