@@ -9,7 +9,13 @@ const test = [
     testimony: "good",
     id: 1,
   },
-  { name: "Emamnuel ", email: "1", position: "dev", testimony: "great", id: 2 },
+  {
+    name: "Emamnuel ",
+    email: "1",
+    position: "dev",
+    testimony: "great",
+    id: 2,
+  },
 ];
 const testifieer = {
   name: "Emamnuel ",
@@ -18,15 +24,17 @@ const testifieer = {
   testimony: "great",
 };
 export default function Mytestimonial() {
-  const [testifiers, setTestifier] = useState([test]);
+  const [testifiers, setTestifier] = useState([]);
   const [testif, settestif] = useState({ testifieer });
+  console.log(test);
 
   const [addTestimony, setaddTestimony] = useState(false);
 
   function handleForm(mytestifier) {
+    console.log(mytestifier);
     settestif(mytestifier);
     setTestifier({ ...testifiers, mytestifier });
-    console.log(mytestifier);
+    console.log(mytestifier[1]);
     console.log(testif);
   }
 
@@ -53,17 +61,10 @@ function TestimonialCard({ testifiers }) {
   console.log(testifiers);
   return (
     <div className={styles.tesiCard}>
-      {testifiers.map((person) => (
-        <PersonCard
-          //   name={name} { name, position, testimony, email }
-          //   position={position}
-          //   testimony={testimony}
-          //   testifier={email}
-          person={person}
-          key={person.id}
-        />
+      {testifiers.map((person, index) => (
+        <PersonCard person={person} key={index} />
       ))}
-      ;{/* <PersonCard /> */}
+      ;
     </div>
   );
 }
@@ -117,40 +118,45 @@ function PersonCard({ person }) {
 // Testimonial Form
 
 function Form({ onsubmit }) {
-  const [name, setname] = useState("");
-  const [email, setemail] = useState("");
-  const [position, setpos] = useState("");
-  const [testimony, settestimony] = useState("");
+  const [myname, setname] = useState("");
+  const [myemail, setemail] = useState("");
+  const [myposition, setpos] = useState("");
+  const [mytestimony, settestimony] = useState("");
+
+  const [mytestifier, setmytestifier] = useState({
+    name: "",
+    email: "",
+    position: "",
+    testimony: "",
+  });
 
   function handleName(value) {
     setname(value);
-    console.log(value);
   }
   function handleEmail(value) {
     setemail(value);
-    console.log(value);
   }
   function handlepos(value) {
     setpos(value);
-    console.log(value);
   }
   function handletestimony(value) {
     settestimony(value);
-    console.log(value);
   }
 
   function handleSubmision(e) {
     e.preventDefault();
+    console.log(e);
+    setmytestifier({
+      ...mytestifier,
+      name: myname,
+      email: myemail,
+      position: myposition,
+      testimony: mytestimony,
+    });
     onsubmit(mytestifier);
-    return { ...mytestifier, name, email, position, testimony };
   }
 
-  let mytestifier = {
-    name,
-    email,
-    position,
-    testimony,
-  };
+  console.log(mytestifier);
 
   return (
     <>
@@ -165,7 +171,7 @@ function Form({ onsubmit }) {
             <label>Full Name</label>
             <input
               type="text"
-              value={name}
+              value={myname}
               onChange={(e) => handleName(e.target.value)}
             />
           </div>
@@ -173,7 +179,7 @@ function Form({ onsubmit }) {
             <label>Email</label>
             <input
               type="email"
-              value={email}
+              value={myemail}
               onChange={(e) => handleEmail(e.target.value)}
             />
           </div>
@@ -181,7 +187,7 @@ function Form({ onsubmit }) {
             <label>Position</label>
             <input
               type="text"
-              value={position}
+              value={myposition}
               onChange={(e) => handlepos(e.target.value)}
             />
           </div>
@@ -189,13 +195,13 @@ function Form({ onsubmit }) {
             <label>Testimonial</label>
             <input
               type="text"
-              value={testimony}
+              value={mytestimony}
               onChange={(e) => handletestimony(e.target.value)}
             />
           </div>
           <div className={styles.formBtn}>
             <button>Cancel</button>
-            <button type="submit" onSubmit={(e) => handleSubmision(e)}>
+            <button type="submit" onClick={(e) => handleSubmision(e)}>
               Submit
             </button>
           </div>

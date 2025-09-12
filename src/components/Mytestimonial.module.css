@@ -152,6 +152,7 @@ h3 {
 .myform div input {
   border: 1px solid rgba(0, 0, 0, 0.164);
   height: 4rem;
+  text-align: center;
   margin-bottom: 2rem;
   border-radius: 6px;
   font-size: 2rem;
