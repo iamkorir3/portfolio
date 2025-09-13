@@ -37,6 +37,13 @@ export default function Mytestimonial() {
     console.log(mytestifier[1]);
     console.log(testif);
   }
+  function handleForm(mytestifier) {
+    console.log(mytestifier);
+    settestif(mytestifier);
+    setTestifier({ ...testifiers, mytestifier });
+    console.log(mytestifier[1]);
+    console.log(testif);
+  }
 
   function handleAddTestimony() {
     setaddTestimony(true);
