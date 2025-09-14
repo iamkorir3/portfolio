@@ -1,72 +1,8 @@
 import { useState } from "react";
 import styles from "./Mytestimonial.module.css";
 
-const test = [
-  {
-    name: "Emamnuel korir",
-    email: "2",
-    position: "lec",
-    testimony: "good",
-    id: 1,
-  },
-  {
-    name: "Emamnuel ",
-    email: "1",
-    position: "dev",
-    testimony: "great",
-    id: 2,
-  },
-];
-const testifieer = {
-  name: "Emamnuel ",
-  email: "manu@gmail",
-  position: "dev",
-  testimony: "great",
-};
 export default function Mytestimonial() {
-  const [testifiers, setTestifier] = useState([test]);
-  const [testif, settestif] = useState({ testifieer });
-  console.log(test);
-
-  const [addTestimony, setaddTestimony] = useState(false);
-
-  function handleForm(mytestifier) {
-    console.log(mytestifier);
-    settestif(mytestifier);
-    setTestifier({ ...testifiers, mytestifier });
-    console.log(mytestifier[1]);
-    console.log(testif);
-  }
-  function handleForm(mytestifier) {
-    console.log(mytestifier);
-    settestif(mytestifier);
-    setTestifier({ ...testifiers, mytestifier });
-    console.log(mytestifier[1]);
-    console.log(testif);
-  }
-
-  function handleAddTestimony() {
-    setaddTestimony(true);
-  }
-  return (
-    <div className={styles.container}>
-      <div className={styles.tesiHeader}>
-        <h2> What people say </h2>
-        <p>
-          Reviews from clients,collaborators, classmates and friends who have
-          experienced my work.
-        </p>
-      </div>
-      <AddTestimonial onAddtest={handleAddTestimony} />
-      <TestimonialCard testifiers={testifiers} />
-      {addTestimony && <Form onsubmit={handleForm} />}
-    </div>
-  );
-}
-
-function TestimonialCard({ testifiers }) {
-  console.log(testifiers);
-  const test = [
+  const [testifiers, setTestifier] = useState([
     {
       name: "Emamnuel korir",
       email: "2",
@@ -81,14 +17,52 @@ function TestimonialCard({ testifiers }) {
       testimony: "great",
       id: 2,
     },
-  ];
+  ]);
+  // const [testif, settestif] = useState({ testifieer });
+  // console.log(test);
+
+  const [addTestimony, setaddTestimony] = useState(false);
+
+  function handleForm(mytestifier) {
+    console.log(mytestifier);
+    setTestifier([mytestifier, ...testifiers]);
+    // settestif(mytestifier);
+    console.log(mytestifier[0]);
+    // console.log(testif);
+  }
+
+  function handleAddTestimony() {
+    setaddTestimony(true);
+  }
+  function handleACloseTestimony() {
+    setaddTestimony(false);
+  }
+  return (
+    <div className={styles.container}>
+      <div className={styles.tesiHeader}>
+        <h2> What people say </h2>
+        <p>
+          Reviews from clients,collaborators, classmates and friends who have
+          experienced my work.
+        </p>
+      </div>
+      <AddTestimonial onAddtest={handleAddTestimony} />
+      <TestimonialCard testifiers={testifiers} />
+      {addTestimony && (
+        <Form onsubmit={handleForm} cancel={handleACloseTestimony} />
+      )}
+    </div>
+  );
+}
+
+function TestimonialCard({ testifiers }) {
+  console.log(testifiers);
+  console.log(testifiers[0]);
+  // const [testing, set]
+
   return (
     <div className={styles.tesiCard}>
       {testifiers.map((person, index) => (
-        <PersonCard person={person} key={index} />
-      ))}
-      ;
-      {test.map((person, index) => (
         <PersonCard person={person} key={index} />
       ))}
       ;
@@ -119,11 +93,7 @@ function PersonCard({ person }) {
         <h3>
           <ion-icon name="chatbubble-ellipses-outline"></ion-icon> Testimony
         </h3>
-        <p>
-          {testimony}
-          {/* Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est,
-          pariatur maiores. Voluptate incidunt aut dolorum. */}
-        </p>
+        <p>{testimony}</p>
         <p className={styles.ratings}>⭐⭐⭐⭐⭐</p>
       </div>
       <div className={styles.testifier}>
@@ -144,34 +114,62 @@ function PersonCard({ person }) {
 // **************
 // Testimonial Form
 
-function Form({ onsubmit }) {
+function Form({ onsubmit, cancel }) {
   const [myname, setname] = useState("");
   const [myemail, setemail] = useState("");
   const [myposition, setpos] = useState("");
   const [mytestimony, settestimony] = useState("");
 
   const [mytestifier, setmytestifier] = useState({
-    name: "manuu",
-    email: "mnue@gnia",
-    position: "web dev",
-    testimony: "testing",
+    name: "",
+    email: "",
+    position: "",
+    testimony: "",
   });
 
   function handleName(value) {
     setname(value);
+    setmytestifier({
+      ...mytestifier,
+      name: myname,
+    });
+
+    console.log(mytestifier);
   }
   function handleEmail(value) {
     setemail(value);
+    setmytestifier({
+      ...mytestifier,
+      email: myemail,
+    });
   }
   function handlepos(value) {
     setpos(value);
+    setmytestifier({
+      ...mytestifier,
+      position: myposition,
+    });
   }
   function handletestimony(value) {
     settestimony(value);
+    setmytestifier({
+      ...mytestifier,
+      testimony: value,
+    });
+    console.log(mytestifier.testimony);
   }
 
   function handleSubmision(e) {
     e.preventDefault();
+    if (
+      myname === "" ||
+      myemail === "" ||
+      myposition === "" ||
+      mytestimony === ""
+    ) {
+      return; // Function stops here
+    }
+
     setmytestifier({
       ...mytestifier,
       name: myname,
@@ -182,8 +180,8 @@ function Form({ onsubmit }) {
     onsubmit(mytestifier);
     console.log(mytestifier);
     console.log({ myname, myemail });
+    cancel();
   }
-
   return (
     <>
       <div className={styles.form}>
@@ -226,7 +224,7 @@ function Form({ onsubmit }) {
             />
           </div>
           <div className={styles.formBtn}>
-            <button>Cancel</button>
+            <button onClick={cancel}>Cancel</button>
             <button type="submit">Submit</button>
           </div>
         </form>
