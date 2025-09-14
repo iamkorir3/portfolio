@@ -4,18 +4,10 @@ import styles from "./Mytestimonial.module.css";
 export default function Mytestimonial() {
   const [testifiers, setTestifier] = useState([
     {
-      name: "Emamnuel korir",
-      email: "2",
-      position: "lec",
-      testimony: "good",
-      id: 1,
-    },
-    {
-      name: "Emamnuel ",
-      email: "1",
-      position: "dev",
-      testimony: "great",
-      id: 2,
+      name: "korir Emamnuel",
+      email: "",
+      position: "The owner (me)",
+      testimony: "I am doing good",
     },
   ]);
   // const [testif, settestif] = useState({ testifieer });
@@ -87,6 +79,21 @@ function AddTestimonial({ onAddtest }) {
 function PersonCard({ person }) {
   const { name, position, testimony } = person;
 
+  let testname = name.split(/\s+/);
+  // let testnames = testname[0].join("");
+  let firstnname = testname[0].toUpperCase();
+  let secondletter = testname[1].toUpperCase();
+  console.log(testname[0]);
+  console.log(testname[1]);
+  console.log(firstnname[1]);
+  let firstname = firstnname.split("").map((word) => word[0]);
+  console.log(firstname[0]);
+  console.log(firstname[1]);
+  // let firstname = name[0][0].[0];
+  // let firstname = name[0][1];
+  // let firstletter = firstname[0];
+  // let secondletter = firstname[0];
+
   return (
     <div className={styles.personCard}>
       <div className={styles.review}>
@@ -97,7 +104,10 @@ function PersonCard({ person }) {
         <p className={styles.ratings}>⭐⭐⭐⭐⭐</p>
       </div>
       <div className={styles.testifier}>
-        <div className={styles.nameInitials}>KE</div>
+        <div className={styles.nameInitials}>
+          {firstnname[0]}
+          {secondletter[0]}
+        </div>
         <div>
           <h2>{name}</h2>
 
