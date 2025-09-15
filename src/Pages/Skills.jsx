@@ -1,10 +1,10 @@
 import Navigation from "../components/Navigation";
-
+import Myskills from "../components/Myskills";
 function Skills() {
   return (
     <div>
-       <Navigation/>
-      <h1>my skills</h1>
+      <Navigation />
+      <Myskills />
     </div>
   );
 }
