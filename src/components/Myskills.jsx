@@ -21,7 +21,7 @@ export default function Myskills() {
 function SkillCard({ skill }) {
   const { name, strength, logo, time } = skill;
   return (
-    <div>
+    <div className={styles.skill}>
       <p>{logo}</p>
       <h3>{name}</h3>
       <p>{time}</p>

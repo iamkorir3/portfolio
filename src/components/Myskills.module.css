@@ -3,6 +3,17 @@
   /* height: 80vh; */
   margin: 0 auto;
   margin-top: 4rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  justify-content: space-between;
   flex-direction: column;
+}
+
+.skill {
+  height: 20rem;
+  background-color: blueviolet;
+  max-width: 40rem;
+  text-align: center;
+  border-radius: 8px;
 }
