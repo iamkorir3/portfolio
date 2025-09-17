@@ -1,10 +1,13 @@
 import Navigation from "../components/Navigation";
+import ContactMe from "../components/ContactMe";
 
 function Contact() {
   return (
     <div>
-       <Navigation/>
-      <h1>contact me</h1>
+      <div>
+        <Navigation />
+      </div>
+      <ContactMe />
     </div>
   );
 }

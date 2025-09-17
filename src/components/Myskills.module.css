@@ -11,9 +11,26 @@
 }
 
 .skill {
-  height: 20rem;
-  background-color: blueviolet;
-  max-width: 40rem;
+  height: 25rem;
+  background-color: rgba(0, 0, 0, 0.932);
+  max-width: 50rem;
   text-align: center;
   border-radius: 8px;
+}
+
+.skillHead {
+  display: flex;
+  width: 60%;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.skillHead p,
+h3 {
+  color: white;
+  /* color: yellow; */
+}
+
+.skillHead p ion-icon {
+  font-size: 3.2rem;
 }

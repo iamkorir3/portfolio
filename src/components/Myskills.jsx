@@ -4,26 +4,27 @@ const skills = [
   {
     name: "HTML5",
     strength: 10,
-    logo: <ion-icon name="logo-html5"></ion-icon>,
+    logo: <ion-icon color="red" name="logo-html5"></ion-icon>,
     time: "1 year + Experience",
   },
   {
     name: "CSS3",
     strength: 10,
-    logo: <ion-icon name="logo-css3"></ion-icon>,
+    logo: <ion-icon color="purple" name="logo-css3"></ion-icon>,
     time: "1 year + Experience",
   },
   {
-    name: "JAVASCRIPT",
+    name: "  JAVASCRIPT",
     strength: 10,
-    logo: <ion-icon name="logo-javascript"></ion-icon>,
-    time: "1/2 year + Experience",
+    logo: <ion-icon color="yellow" name="logo-javascript"></ion-icon>,
+    time: "3/4 year + Experience",
   },
   {
     name: "REACT",
     strength: 10,
-    logo: <ion-icon name="logo-react"></ion-icon>,
+    logo: <ion-icon color="blue" name="logo-react"></ion-icon>,
     time: "6 MONTHS + Experience",
+    color: "",
   },
   { name: "C", strength: 10, logo: <p>tye</p>, time: "1 year + Experience" },
   { name: "C++", strength: 10, logo: <p>tye</p>, time: "1 year + Experience" },
@@ -41,12 +42,14 @@ export default function Myskills() {
 }
 
 function SkillCard({ skill }) {
-  const { name, strength, logo, time } = skill;
+  const { name, strength, logo, time, color } = skill;
   return (
     <div className={styles.skill}>
-      <p>{logo}</p>
-      <h3>{name}</h3>
-      <p>{time}</p>
+      <div className={styles.skillHead}>
+        <p style={{ color: color }}>{logo}</p>
+        <h3>{name}</h3>
+      </div>
+      <p style={{ color: "whitesmoke", fontSize: "2rem" }}>{time}</p>
       <div>{strength}</div>
     </div>
   );
