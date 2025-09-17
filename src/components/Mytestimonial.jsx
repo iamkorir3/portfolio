@@ -7,11 +7,9 @@ export default function Mytestimonial() {
       name: "korir Emamnuel",
       email: "",
       position: "The owner (me)",
-      testimony: "I am doing good",
+      testimony: "I think I am doing good",
     },
   ]);
-  // const [testif, settestif] = useState({ testifieer });
-  // console.log(test);
 
   const [addTestimony, setaddTestimony] = useState(false);
 
