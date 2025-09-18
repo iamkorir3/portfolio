@@ -24,6 +24,12 @@ function Projects() {
         <ProjectCard>
           <p></p>
           <h2>UsePopcorn</h2>
+          <div>
+            <link to="https://github.com/iamkorir3/Use-popcorn">
+              {"</> code"}
+            </link>
+            <button></button>
+          </div>
         </ProjectCard>
         <ProjectCard>
           <p></p>
@@ -36,6 +42,10 @@ function Projects() {
         <ProjectCard className={styles.toDolist}>
           <p></p>
           <h2>To Do List</h2>
+          <div>
+            <link>{"</> code"}</link>
+            <button></button>
+          </div>
         </ProjectCard>
       </>
     </div>
