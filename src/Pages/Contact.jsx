@@ -1,15 +1,15 @@
 import Navigation from "../components/Navigation";
 import ContactMe from "../components/ContactMe";
+import styles from "./Contact.module.css";
 
-function Contact() {
+export default function Contact() {
   return (
-    <div>
-      <div>
-        <Navigation />
-      </div>
+    <div className={styles.container}>
       <ContactMe />
+      {/* <p>
+        <head>hello</head>
+      </p> */}
+      <Navigation />
     </div>
   );
 }
-
-export default Contact;

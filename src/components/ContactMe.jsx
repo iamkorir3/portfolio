@@ -1,14 +1,39 @@
 import styles from "./ContactMe.module.css";
 
-function ContactMe() {
+export default function ContactMe() {
   return (
     <div className={styles.container}>
-      <div className={styles.infoTitle}>
+      <div>
         <h2>About Me</h2>
         <p>Discover More about me, story behind my Work</p>
+        <MyAccounts />
       </div>
     </div>
   );
 }
 
-export default ContactMe;
+function MyAccounts() {
+  const accountss = [
+    { title: "GITHUB" },
+    { title: "LINKEDIN" },
+    { title: "LEETCODE" },
+    { title: "TWITTER" },
+    { title: "INSTAGRAM" },
+  ];
+  return (
+    <div>
+      {accountss.map((account, index) => (
+        <Accounts account={account} key={index} />
+      ))}
+    </div>
+  );
+}
+
+function Accounts({ account }) {
+  const { title } = account;
+  return (
+    <div>
+      <h2>{title}</h2>
+    </div>
+  );
+}
