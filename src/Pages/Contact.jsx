@@ -5,11 +5,12 @@ import styles from "./Contact.module.css";
 export default function Contact() {
   return (
     <div className={styles.container}>
-      <ContactMe />
-      {/* <p>
-        <head>hello</head>
-      </p> */}
       <Navigation />
+      <CallConat />
     </div>
   );
+}
+
+function CallConat() {
+  return <ContactMe />;
 }
