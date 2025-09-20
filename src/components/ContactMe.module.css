@@ -27,3 +27,32 @@
   padding: 2rem;
   color: black;
 }
+.container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.contactTitle h2 {
+  font-size: 4.8rem;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.contactTitle p {
+  font-size: 2.8rem;
+  opacity: 50%;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.Mylinks h3 {
+  width: 50%;
+  background-color: blueviolet;
+  aspect-ratio: 9/3;
+  font-size: 2rem;
+  padding: 2rem;
+  color: black;
+}
