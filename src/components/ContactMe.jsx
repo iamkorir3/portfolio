@@ -3,9 +3,9 @@ import styles from "./ContactMe.module.css";
 export default function ContactMe() {
   return (
     <div className={styles.container}>
-      <div>
-        <h2>About Me</h2>
-        <p>Discover More about me, story behind my Work</p>
+      <div className={styles.contactTitle}>
+        <h2>Contact Me</h2>
+        <p>Reach out to me via form, social media and links provided.</p>
         <MyAccounts />
       </div>
     </div>
@@ -32,8 +32,8 @@ function MyAccounts() {
 function Accounts({ account }) {
   const { title } = account;
   return (
-    <div>
-      <h2>{title}</h2>
+    <div className={styles.Mylinks}>
+      <h3>{title}</h3>
     </div>
   );
 }
