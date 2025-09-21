@@ -13,27 +13,84 @@ export default function ContactMe() {
 }
 
 function MyAccounts() {
-  const accountss = [
-    { title: "GITHUB" },
-    { title: "LINKEDIN" },
-    { title: "LEETCODE" },
-    { title: "TWITTER" },
-    { title: "INSTAGRAM" },
-  ];
+  // const accountss = [
+  //   { title: "GITHUB" },
+  //   { title: "LINKEDIN" },
+  //   { title: "LEETCODE" },
+  //   { title: "TWITTER" },
+  //   { title: "INSTAGRAM" },
+  // ];
   return (
-    <div>
-      {accountss.map((account, index) => (
+    <div className={styles.Mylinks}>
+      {/* {accountss.map((account, index) => (
         <Accounts account={account} key={index} />
-      ))}
+      ))} */}
+      <Accounts>
+        <ion-icon name="logo-github"></ion-icon>
+
+        <div>
+          <h3>Github</h3>
+          <p>Explore code & projects</p>
+        </div>
+        <button>
+          click
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </Accounts>
+      <Accounts>
+        <ion-icon name="logo-github"></ion-icon>
+        <div>
+          <h3>LinkedIn</h3>
+          <p>Connect with me proffesionally</p>
+        </div>
+        <button>
+          click
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </Accounts>
+      <Accounts>
+        <ion-icon name="logo-github"></ion-icon>
+        <div>
+          <h3>Leetcode</h3>
+          <p>Check my code code test</p>
+        </div>
+        <button>
+          click
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </Accounts>
+      <Accounts>
+        <ion-icon name="logo-github"></ion-icon>
+
+        <div>
+          <h3>Instagram</h3>
+          <p>Life updates</p>
+        </div>
+        <button>
+          click
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </Accounts>
+      <Accounts>
+        <ion-icon name="logo-github"></ion-icon>
+        <div>
+          <h3>Twitter</h3>
+          <p>Random post & tweets</p>
+        </div>
+        <button>
+          click
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </Accounts>
     </div>
   );
 }
 
-function Accounts({ account }) {
-  const { title } = account;
+function Accounts({ children }) {
+  // const { title } = account;
   return (
-    <div className={styles.Mylinks}>
-      <h3>{title}</h3>
+    <div className={styles.myLink}>
+      <>{children}</>
     </div>
   );
 }

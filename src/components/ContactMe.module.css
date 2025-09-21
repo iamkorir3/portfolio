@@ -19,40 +19,32 @@
   margin: 0 auto;
 }
 
-.Mylinks h3 {
+.Mylinks {
   width: 50%;
   background-color: blueviolet;
-  aspect-ratio: 9/3;
-  font-size: 2rem;
+  height: max-content;
   padding: 2rem;
-  color: black;
 }
-.container {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 4rem;
+
+.myLink {
+  background-color: whitesmoke;
   display: flex;
-  flex-direction: column;
-}
-.contactTitle h2 {
-  font-size: 4.8rem;
-  width: fit-content;
-  margin: 0 auto;
-  margin-top: 3rem;
-}
-
-.contactTitle p {
-  font-size: 2.8rem;
-  opacity: 50%;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.Mylinks h3 {
-  width: 50%;
-  background-color: blueviolet;
-  aspect-ratio: 9/3;
-  font-size: 2rem;
   padding: 2rem;
+}
+.myLink h3 {
   color: black;
+  font-size: 3.2rem;
+}
+.myLink p {
+  opacity: 100%;
+  color: black;
+  font-size: 2rem;
+}
+
+.myLink ion-icon {
+  font-size: 2rem;
+  color: black;
+  background-color: blue;
+  width: 3rem;
+  /* width: 29rem; */
 }
