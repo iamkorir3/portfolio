@@ -21,15 +21,40 @@
 
 .Mylinks {
   width: 50%;
-  background-color: blueviolet;
+  background-color: whitesmoke;
   height: max-content;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .myLink {
-  background-color: whitesmoke;
+  background-color: white;
+  width: 96%;
+  height: 12rem;
   display: flex;
+  justify-content: space-between;
   padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.iconName {
+  display: flex;
+  gap: 4rem;
+}
+
+.iconName ion-icon {
+  border: none;
+  color: white;
+  background-color: black;
+  border-radius: 0.5rem;
+  width: 6rem;
+  height: 6rem;
+  padding: 1rem;
 }
 .myLink h3 {
   color: black;
@@ -41,10 +66,16 @@
   font-size: 2rem;
 }
 
-.myLink ion-icon {
+.linkBtn {
   font-size: 2rem;
   color: black;
-  background-color: blue;
-  width: 3rem;
-  /* width: 29rem; */
+  background-color: inherit;
+  align-self: center;
+  /* justify-self: end; */
+  border: none;
+  /* width: 3rem; */
+}
+
+.linkBtn:hover {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
 }

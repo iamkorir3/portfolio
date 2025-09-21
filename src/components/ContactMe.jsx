@@ -1,4 +1,5 @@
 import styles from "./ContactMe.module.css";
+import { Link } from "react-router-dom";
 
 export default function ContactMe() {
   return (
@@ -26,61 +27,66 @@ function MyAccounts() {
         <Accounts account={account} key={index} />
       ))} */}
       <Accounts>
-        <ion-icon name="logo-github"></ion-icon>
+        <div className={styles.iconName}>
+          <ion-icon name="logo-github"></ion-icon>
 
-        <div>
-          <h3>Github</h3>
-          <p>Explore code & projects</p>
+          <div>
+            <h3>Github</h3>
+            <p>Explore code & projects</p>
+          </div>
         </div>
-        <button>
-          click
+        <Link className={styles.linkBtn}>
           <ion-icon name="chevron-forward-outline"></ion-icon>
-        </button>
+        </Link>
       </Accounts>
       <Accounts>
-        <ion-icon name="logo-github"></ion-icon>
-        <div>
-          <h3>LinkedIn</h3>
-          <p>Connect with me proffesionally</p>
+        <div className={styles.iconName}>
+          <ion-icon name="logo-github"></ion-icon>
+          <div>
+            <h3>LinkedIn</h3>
+            <p>Connect with me proffesionally</p>
+          </div>
         </div>
-        <button>
-          click
+        <Link className={styles.linkBtn}>
           <ion-icon name="chevron-forward-outline"></ion-icon>
-        </button>
+        </Link>
       </Accounts>
       <Accounts>
-        <ion-icon name="logo-github"></ion-icon>
-        <div>
-          <h3>Leetcode</h3>
-          <p>Check my code code test</p>
+        <div className={styles.iconName}>
+          <ion-icon name="logo-github"></ion-icon>
+          <div>
+            <h3>Leetcode</h3>
+            <p>Check my code code test</p>
+          </div>
         </div>
-        <button>
-          click
+        <Link className={styles.linkBtn}>
           <ion-icon name="chevron-forward-outline"></ion-icon>
-        </button>
+        </Link>
       </Accounts>
       <Accounts>
-        <ion-icon name="logo-github"></ion-icon>
+        <div className={styles.iconName}>
+          <ion-icon name="logo-github"></ion-icon>
 
-        <div>
-          <h3>Instagram</h3>
-          <p>Life updates</p>
+          <div>
+            <h3>Instagram</h3>
+            <p>Life updates</p>
+          </div>
         </div>
-        <button>
-          click
+        <Link className={styles.linkBtn}>
           <ion-icon name="chevron-forward-outline"></ion-icon>
-        </button>
+        </Link>
       </Accounts>
       <Accounts>
-        <ion-icon name="logo-github"></ion-icon>
-        <div>
-          <h3>Twitter</h3>
-          <p>Random post & tweets</p>
+        <div className={styles.iconName}>
+          <ion-icon name="logo-github"></ion-icon>
+          <div>
+            <h3>Twitter</h3>
+            <p>Random post & tweets</p>
+          </div>
         </div>
-        <button>
-          click
+        <Link className={styles.linkBtn}>
           <ion-icon name="chevron-forward-outline"></ion-icon>
-        </button>
+        </Link>
       </Accounts>
     </div>
   );
