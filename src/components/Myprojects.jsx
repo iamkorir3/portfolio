@@ -23,7 +23,9 @@ function Projects() {
           />
           <div className={styles.projectLinks}>
             <a href="https://use-popcorn-henna-eta.vercel.app/">{"</>"}Code</a>
-            <a href="https://use-popcorn-henna-eta.vercel.app/">🚀Live</a>
+            <a href="https://use-popcorn-henna-eta.vercel.app/">
+              <ion-icon name="link-outline"></ion-icon> Live
+            </a>
           </div>
         </ProjectCard>
         <ProjectCard>

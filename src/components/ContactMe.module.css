@@ -79,3 +79,60 @@
 .linkBtn:hover {
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
 }
+
+/* 
+******************
+CONTACT FORM
+************** */
+.contactForm {
+  width: 48%;
+  background-color: blueviolet;
+}
+
+.contactForm h2 {
+  font-size: 3.2rem;
+}
+.contactForm ion-icon {
+  color: black;
+}
+.myForm {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.myForm label {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.myForm input {
+  width: 80%;
+  height: 6rem;
+  margin-bottom: 2rem;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+.formBtn {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+}
+
+.formBtn button {
+  background-color: red;
+  width: fit-content;
+  font-size: 2.4rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+
+.formBtn textarea {
+  height: 10rem !important;
+  width: 2rem;
+}
+
+.message {
+  height: 100rem;
+}

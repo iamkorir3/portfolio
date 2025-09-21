@@ -7,7 +7,11 @@ export default function ContactMe() {
       <div className={styles.contactTitle}>
         <h2>Contact Me</h2>
         <p>Reach out to me via form, social media and links provided.</p>
-        <MyAccounts />
+        <div style={{ display: "flex", gap: "4rem" }}>
+          <MyAccounts />
+
+          <ContactForm />
+        </div>
       </div>
     </div>
   );
@@ -41,7 +45,7 @@ function MyAccounts() {
       </Accounts>
       <Accounts>
         <div className={styles.iconName}>
-          <ion-icon name="logo-github"></ion-icon>
+          <ion-icon name="logo-linkedin"></ion-icon>
           <div>
             <h3>LinkedIn</h3>
             <p>Connect with me proffesionally</p>
@@ -53,7 +57,8 @@ function MyAccounts() {
       </Accounts>
       <Accounts>
         <div className={styles.iconName}>
-          <ion-icon name="logo-github"></ion-icon>
+          <ion-icon name="laptop-outline"></ion-icon>
+
           <div>
             <h3>Leetcode</h3>
             <p>Check my code code test</p>
@@ -65,7 +70,7 @@ function MyAccounts() {
       </Accounts>
       <Accounts>
         <div className={styles.iconName}>
-          <ion-icon name="logo-github"></ion-icon>
+          <ion-icon name="logo-instagram"></ion-icon>
 
           <div>
             <h3>Instagram</h3>
@@ -78,7 +83,7 @@ function MyAccounts() {
       </Accounts>
       <Accounts>
         <div className={styles.iconName}>
-          <ion-icon name="logo-github"></ion-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
           <div>
             <h3>Twitter</h3>
             <p>Random post & tweets</p>
@@ -97,6 +102,34 @@ function Accounts({ children }) {
   return (
     <div className={styles.myLink}>
       <>{children}</>
+    </div>
+  );
+}
+
+function ContactForm() {
+  return (
+    <div className={styles.contactForm}>
+      <h2>
+        {" "}
+        <ion-icon name="mail-outline"></ion-icon>Send me a message
+      </h2>
+      <form className={styles.myForm}>
+        <input type="text" placeholder="Enter your name" />
+
+        <input type="email" placeholder=" email address" />
+
+        {/* <input
+          className={styles.message}
+          type="text"
+          placeholder="enter your message here"
+        /> */}
+        <textarea placeholder="Your message" />
+
+        <div className={styles.formBtn}>
+          <button>cancel</button>
+          <button>send</button>
+        </div>
+      </form>
     </div>
   );
 }
