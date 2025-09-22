@@ -7,6 +7,14 @@ export default function ContactMe() {
       <div className={styles.contactTitle}>
         <h2>Contact Me</h2>
         <p>Reach out to me via form, social media and links provided.</p>
+        <div className={styles.ctaBtn}>
+          <button>
+            <ion-icon name="mail-outline"></ion-icon> Contact Me
+          </button>
+          <button>
+            <ion-icon name="heart-outline"></ion-icon> Support Me
+          </button>
+        </div>
         <div style={{ display: "flex", gap: "4rem" }}>
           <MyAccounts />
 

@@ -19,14 +19,39 @@
   margin: 0 auto;
 }
 
+.ctaBtn {
+  display: flex;
+  width: fit-content;
+  gap: 4rem;
+  margin: 2rem auto;
+  justify-self: center;
+  justify-content: center;
+}
+
+.ctaBtn button {
+  font-size: 2.4rem;
+  font-weight: 600;
+  border: none;
+  padding: 1rem 0.5rem;
+  border-radius: 5px;
+  background-color: rgb(27, 27, 46);
+  color: white;
+}
+.ctaBtn button ion-icon {
+  color: white;
+  align-self: center;
+}
+
 .Mylinks {
-  width: 50%;
+  width: 48%;
   background-color: whitesmoke;
   height: max-content;
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
+  justify-content: space-between;
+  border-radius: 15px;
 }
 
 .myLink {

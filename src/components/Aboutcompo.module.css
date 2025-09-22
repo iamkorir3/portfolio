@@ -30,6 +30,13 @@
   margin: 0 auto;
   margin-top: 3rem;
 }
+.myInfo h2 ion-icon {
+  background-color: rgb(35, 35, 56);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: yellow;
+}
 .infoTitle p {
   font-size: 2.8rem;
   opacity: 70%;
