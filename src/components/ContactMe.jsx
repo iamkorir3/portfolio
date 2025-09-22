@@ -39,7 +39,7 @@ function MyAccounts() {
             <p>Explore code & projects</p>
           </div>
         </div>
-        <Link className={styles.linkBtn}>
+        <Link to="https://github.com/iamkorir3" className={styles.linkBtn}>
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </Link>
       </Accounts>
@@ -61,7 +61,7 @@ function MyAccounts() {
 
           <div>
             <h3>Leetcode</h3>
-            <p>Check my code code test</p>
+            <p>Check my code test</p>
           </div>
         </div>
         <Link className={styles.linkBtn}>
@@ -118,16 +118,13 @@ function ContactForm() {
 
         <input type="email" placeholder=" email address" />
 
-        {/* <input
-          className={styles.message}
-          type="text"
-          placeholder="enter your message here"
-        /> */}
-        <textarea placeholder="Your message" />
+        <textarea className={styles.textAre} placeholder="Your message" />
 
         <div className={styles.formBtn}>
-          <button>cancel</button>
-          <button>send</button>
+          {/* <button>cancel</button> */}
+          <button>
+            Send <ion-icon name="send-outline"></ion-icon>
+          </button>
         </div>
       </form>
     </div>

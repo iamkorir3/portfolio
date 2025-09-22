@@ -86,11 +86,15 @@ CONTACT FORM
 ************** */
 .contactForm {
   width: 48%;
-  background-color: blueviolet;
+  background-color: whitesmoke;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 }
 
 .contactForm h2 {
   font-size: 3.2rem;
+  text-align: left;
+  margin-bottom: 4rem;
 }
 .contactForm ion-icon {
   color: black;
@@ -99,6 +103,7 @@ CONTACT FORM
   display: flex;
   width: 100%;
   flex-direction: column;
+  gap: 2rem;
   margin: 0 auto;
 }
 
@@ -110,24 +115,57 @@ CONTACT FORM
 .myForm input {
   width: 80%;
   height: 6rem;
+  margin: 0 auto;
   margin-bottom: 2rem;
-  border: 2px solid black;
+  border: 2px solid rgba(0, 0, 0, 0.463);
   border-radius: 8px;
+  padding: 0 2rem;
 }
+.myForm input:focus {
+  outline: none;
+  border-color: #3498db;
+  border-color: rgb(93, 218, 93);
+  background-color: white;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.textAre {
+  width: 80%;
+  height: 20rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.textAre:focus {
+  outline: none;
+  border-color: #3498db;
+  border-color: rgb(93, 218, 93);
+  background-color: white;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
 .formBtn {
-  /* display: flex; */
+  display: flex;
   /* flex-direction: column; */
   /* justify-content: space-between; */
 }
 
 .formBtn button {
-  background-color: red;
-  width: fit-content;
-  font-size: 2.4rem;
-  font-weight: 600;
+  background-color: rgb(23, 23, 43);
+  color: white;
+  width: 80%;
+  font-size: 2.8rem;
+  font-weight: 700;
   padding: 0.5rem 1rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  cursor: pointer;
+  /* justify-self: center; */
 }
-
+.formBtn button ion-icon {
+  color: white;
+  /* margin-top: 0.3rem; */
+}
 .formBtn textarea {
   height: 10rem !important;
   width: 2rem;
