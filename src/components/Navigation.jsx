@@ -1,12 +1,27 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
+import { useState } from "react";
 export default function Navigation() {
+  const [nav, setNav] = useState(false);
+  function handleNav() {
+    setNav(nav === true ? false : true);
+  }
   return (
     <div className={styles.container}>
-      <ul className={styles.navlinks}>
-        <p to="">
+      <p to="">
+        <ion-icon name="code-slash"></ion-icon> My Portfolio{" "}
+      </p>
+      <button onClick={handleNav}>
+        {nav ? (
+          <ion-icon name="close-outline"></ion-icon>
+        ) : (
+          <ion-icon name="menu-outline"></ion-icon>
+        )}
+      </button>
+      <ul className={`${styles.navlinks} ${nav ? styles.navActive : ""}`}>
+        {/* <p to="">
           <ion-icon name="code-slash"></ion-icon> My Portfolio{" "}
-        </p>
+        </p> */}
 
         <li>
           <NavLink to="/">

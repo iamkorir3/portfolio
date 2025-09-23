@@ -1,20 +1,55 @@
 .container {
   display: flex;
+  gap: 5rem;
   background-color: rgba(232, 233, 239, 0.936);
   background-color: white;
   padding: 2rem 1rem;
   width: 100%;
   border-radius: 2px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  /* position: static; */
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container p {
+  opacity: 80%;
+  font-weight: 600;
+  font-size: 3.6rem;
+  justify-self: right;
+  margin-left: 10rem;
+}
+.container button {
+  height: fit-content;
+  padding: 0.5rem;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding-top: 1rem;
+  display: none;
+  z-index: 1000;
+
+  text-align: end;
+  justify-self: end;
+}
+.container button ion-icon {
+  font-weight: bold;
+  font-size: 3rem;
 }
 .navlinks {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1.4fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   text-decoration: none;
   padding: 0;
   align-items: center;
   width: 90%;
   margin: 0 auto;
+  margin-left: 3rem;
 }
 .navlinks p {
   opacity: 80%;
@@ -48,4 +83,59 @@ ion-icon {
   color: #333;
   font-size: 2.8rem;
   transition: all 0.3s ease;
+}
+
+/* *************
+MEDIA QUERRY
+************** */
+@media (max-width: 400px) {
+  .container {
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .navlinks {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    color: black;
+    gap: 2rem;
+    width: 50%;
+    margin: 0;
+    justify-self: flex-start;
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    right: -50%;
+    padding-top: 8rem;
+    top: 0;
+    z-index: 999;
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  .navActive {
+    /* display: block; */
+    right: 0;
+    opacity: 100%;
+    transition: all 1s;
+  }
+  .navlinks li {
+    font-weight: 600;
+    opacity: 90%;
+    font-size: 2.8rem;
+    list-style: none;
+    text-decoration: none;
+    text-align: left;
+    align-self: baseline;
+    margin-bottom: 2rem;
+    /* display: flex; */
+    /* gap: 2rem; */
+  }
+
+  .container button {
+    display: block;
+  }
 }
