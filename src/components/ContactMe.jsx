@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./ContactMe.module.css";
 import { Link } from "react-router-dom";
 
@@ -115,6 +116,31 @@ function Accounts({ children }) {
 }
 
 function ContactForm() {
+  const [messanger, setSessanger] = useState({
+    naame: "",
+    email: "",
+    message: "",
+  });
+  const [messangers, setmessangers] = useState([messanger]);
+
+  function handleMessngers(e) {
+    e.preventDefault();
+    setmessangers((prevItems) => {
+      const newmessage = [...prevItems, messanger];
+      return newmessage;
+    });
+    console.log(messangers);
+  }
+
+  function hanleSetnaame(value) {
+    setSessanger({ ...messanger, naame: value });
+  }
+  function hanleSeteamil(value) {
+    setSessanger({ ...messanger, email: value });
+  }
+  function hanleSetmessage(value) {
+    setSessanger({ ...messanger, message: value });
+  }
   return (
     <div className={styles.contactForm}>
       <h2>
@@ -122,15 +148,27 @@ function ContactForm() {
         <ion-icon name="mail-outline"></ion-icon>Send me a message
       </h2>
       <form className={styles.myForm}>
-        <input type="text" placeholder="Enter your name" />
+        <input
+          type="text"
+          placeholder="Enter your name"
+          onChange={(e) => hanleSetnaame(e.target.value)}
+        />
 
-        <input type="email" placeholder=" email address" />
+        <input
+          type="email"
+          placeholder=" email address"
+          onChange={(e) => hanleSeteamil(e.target.value)}
+        />
 
-        <textarea className={styles.textAre} placeholder="Your message" />
+        <textarea
+          className={styles.textAre}
+          onChange={(e) => hanleSetmessage(e.target.value)}
+          placeholder="Your message"
+        />
 
         <div className={styles.formBtn}>
           {/* <button>cancel</button> */}
-          <button>
+          <button onClick={(e) => handleMessngers(e)}>
             Send <ion-icon name="send-outline"></ion-icon>
           </button>
         </div>
