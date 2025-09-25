@@ -1,22 +1,53 @@
 .container {
   width: 80%;
-  /* height: 80vh; */
   margin: 0 auto;
   margin-top: 4rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
   justify-content: space-between;
   flex-direction: column;
   margin-top: 18rem;
 }
 
+.skillheader {
+  text-align: center;
+}
+
+.skillheader h2 {
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+}
+.skillheader p {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.skillcontainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.Myskillss {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
 .skill {
-  height: 25rem;
-  background-color: rgba(0, 0, 0, 0.932);
-  max-width: 50rem;
+  height: 24rem;
+  width: 40rem;
+  background-color: rgb(240, 239, 239);
   text-align: center;
   border-radius: 8px;
+}
+
+.codepic {
+  width: 30%;
+  margin-right: 2rem;
+}
+
+.codepic img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .skillHead {
@@ -28,7 +59,7 @@
 
 .skillHead p,
 h3 {
-  color: white;
+  color: black;
   /* color: yellow; */
 }
 

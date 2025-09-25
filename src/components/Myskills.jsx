@@ -23,20 +23,46 @@ const skills = [
     name: "REACT",
     strength: 10,
     logo: <ion-icon color="blue" name="logo-react"></ion-icon>,
-    time: "6 MONTHS + Experience",
+    time: "6 months + Experience",
     color: "",
   },
-  { name: "C", strength: 10, logo: <p>tye</p>, time: "1 year + Experience" },
-  { name: "C++", strength: 10, logo: <p>tye</p>, time: "1 year + Experience" },
-  { name: "JAVA", strength: 10, logo: <p>tye</p>, time: "1 year + Experience" },
+  { name: "C", strength: 10, logo: <p>C</p>, time: "1 year + Experience" },
+  { name: "C++", strength: 10, logo: <p>C++</p>, time: "1 year + Experience" },
+  {
+    name: "JAVA",
+    strength: 10,
+    logo: <p>🍵</p>,
+    time: "6 months + Experience",
+  },
 ];
 
 export default function Myskills() {
   return (
     <div className={styles.container}>
-      {skills.map((skill, index) => (
-        <SkillCard skill={skill} key={index} />
-      ))}
+      <div className={styles.skillheader}>
+        <h2>Programming Language</h2>
+
+        <p>
+          These are the languages that i have learned as frontend developer and
+          others in school.
+        </p>
+      </div>
+      <Skiils />
+    </div>
+  );
+}
+
+function Skiils() {
+  return (
+    <div className={styles.skillcontainer}>
+      <div className={styles.codepic}>
+        <img src="/code.jpg" alt="code" />
+      </div>
+      <div className={styles.Myskillss}>
+        {skills.map((skill, index) => (
+          <SkillCard skill={skill} key={index} />
+        ))}
+      </div>
     </div>
   );
 }
@@ -49,7 +75,7 @@ function SkillCard({ skill }) {
         <p style={{ color: color }}>{logo}</p>
         <h3>{name}</h3>
       </div>
-      <p style={{ color: "whitesmoke", fontSize: "2rem" }}>{time}</p>
+      <p style={{ color: "black", fontSize: "2rem" }}>{time}</p>
       <div>{strength}</div>
     </div>
   );

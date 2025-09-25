@@ -3,7 +3,7 @@
   margin: 0 auto;
   margin-top: 4rem;
   display: flex;
-  margin-top: 14rem;
+  margin-top: 14rem !important;
 }
 
 .imgContainer {
@@ -30,6 +30,7 @@
   width: fit-content;
   margin: 0 auto;
   margin-top: 3rem;
+  color: black;
 }
 .myInfo h2 ion-icon {
   background-color: rgb(35, 35, 56);
