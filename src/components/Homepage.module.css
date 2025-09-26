@@ -193,3 +193,99 @@ Language icons
   margin: auto;
   color: white;
 } */
+
+/* *******************
+MEDIA QUERRY
+**************** */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+  }
+
+  .detailContainer {
+    /* background-color: whitesmoke; */
+    width: 100%;
+    padding-top: 3rem;
+  }
+  .detailContainer h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .quickStat {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* flex-direction: column; */
+    gap: 2rem;
+  }
+
+  .quickStat section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgb(27, 27, 55);
+    color: white;
+  }
+
+  .profile {
+    width: 100%;
+    position: relative;
+    margin-top: 6rem;
+  }
+
+  .myImg {
+    width: 80%;
+    display: flex;
+    margin: auto !important;
+    border-radius: 50%;
+  }
+
+  .js ion-icon {
+    font-size: 5rem;
+    position: absolute;
+  }
+
+  .js :first-child ion-icon {
+    fill: rgb(255, 255, 10);
+    top: 3rem;
+    left: 2rem;
+    border-radius: 50%;
+    padding: 1rem;
+    background-color: rgb(27, 27, 55);
+  }
+  .js :nth-child(2) ion-icon {
+    fill: rgb(233, 20, 216);
+    right: 3rem;
+    top: 33rem;
+    border-radius: 50%;
+    padding: 1rem;
+    background-color: rgb(27, 27, 55);
+  }
+  .js :nth-child(3) ion-icon {
+    fill: white;
+    stroke-width: 1rem;
+    border-radius: 50%;
+    padding: 1rem;
+    right: -4rem;
+    left: 83.5%;
+    background-color: rgb(27, 27, 55);
+
+    top: 3rem;
+    right: 8rem;
+  }
+  .js :last-child ion-icon {
+    fill: orange;
+    top: 33rem;
+    left: 2rem;
+    border-radius: 50%;
+    padding: 1rem;
+    background-color: rgb(27, 27, 55);
+  }
+}

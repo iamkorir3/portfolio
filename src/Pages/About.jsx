@@ -3,7 +3,7 @@ import Aboutcompo from "../components/Aboutcompo";
 export default function About() {
   return (
     <div>
-      {/* <Navigation /> */}
+      <Navigation />
       <Aboutcompo />
     </div>
   );
