@@ -6,6 +6,7 @@ export default function About() {
         <h2>About Me</h2>
         <p>Discover More about me, story behind my Work</p>
       </div>
+
       <div className={styles.container}>
         <Picture />
         <InfoMe />

@@ -1,9 +1,8 @@
 .container {
   width: 90%;
   margin: 0 auto;
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
-  margin-top: 14rem !important;
 }
 
 .imgContainer {
@@ -31,6 +30,7 @@
   margin: 0 auto;
   margin-top: 3rem;
   color: black;
+  margin-top: 15rem !important;
 }
 .myInfo h2 ion-icon {
   background-color: rgb(35, 35, 56);
