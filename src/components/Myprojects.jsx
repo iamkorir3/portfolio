@@ -4,6 +4,10 @@ import styles from "./Myprojects.module.css";
 export default function Myprojects() {
   return (
     <div className={styles.container}>
+      <div className={styles.projeTitle}>
+        <h2>My Projects</h2>
+        <p>These are some of the projects which i developed while learning</p>
+      </div>
       <Projects />
     </div>
   );
