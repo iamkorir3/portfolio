@@ -34,7 +34,9 @@
 .skill {
   height: 24rem;
   width: 40rem;
-  background-color: rgb(240, 239, 239);
+  background-color: rgb(236, 233, 233);
+  /* background-color: rgb(25, 25, 51); */
+
   text-align: center;
   border-radius: 8px;
 }
@@ -59,10 +61,48 @@
 
 .skillHead p,
 h3 {
-  color: black;
+  color: white;
   /* color: yellow; */
 }
 
 .skillHead p ion-icon {
   font-size: 3.2rem;
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 12rem;
+  }
+  .skillcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+  .Myskillss {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 0 auto;
+  }
+
+  .skill {
+    height: 18rem;
+    max-width: 26rem;
+    background-color: rgb(240, 239, 239);
+    background-color: rgb(25, 25, 51);
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .codepic {
+    width: 30%;
+    margin-right: 2rem;
+    display: none;
+  }
 }

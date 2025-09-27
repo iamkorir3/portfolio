@@ -75,7 +75,7 @@ function SkillCard({ skill }) {
         <p style={{ color: color }}>{logo}</p>
         <h3>{name}</h3>
       </div>
-      <p style={{ color: "black", fontSize: "2rem" }}>{time}</p>
+      <p style={{ color: "white", fontSize: "2rem" }}>{time}</p>
       <div>{strength}</div>
     </div>
   );
