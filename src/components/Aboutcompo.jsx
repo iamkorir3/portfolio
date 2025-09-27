@@ -4,7 +4,10 @@ export default function About() {
     <>
       <div className={styles.infoTitle}>
         <h2>About Me</h2>
-        <p>Discover More about me, story behind my Work</p>
+        <p>
+          Discover More about me{" "}
+          <span className={styles.cutP}>, story behind my Work</span>{" "}
+        </p>
       </div>
 
       <div className={styles.container}>

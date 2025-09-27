@@ -88,3 +88,60 @@ personalInfo
   margin-top: 4rem;
   padding: 2rem;
 }
+
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .myImg {
+    width: 80%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    border: 2px whitesmoke;
+    margin: auto;
+    margin-top: 6%;
+    margin-bottom: 6%;
+  }
+
+  .myInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 6rem;
+    margin-top: 5%;
+  }
+
+  .myInfo h2 {
+    font-size: 3.6rem;
+    /* text-align: center; */
+    margin-left: 20%;
+    margin-bottom: 2rem;
+  }
+
+  .cutP {
+    display: none;
+  }
+
+  .myPersonalInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    font-size: 2.4rem;
+  }
+
+  .btnResume {
+    width: fit-content;
+    font-size: 2.4rem;
+    font-weight: 600;
+    border: 3px solid rgba(0, 0, 0, 0.575);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    padding: 2rem;
+  }
+}
