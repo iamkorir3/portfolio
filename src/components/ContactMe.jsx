@@ -16,7 +16,10 @@ export default function ContactMe() {
             <ion-icon name="heart-outline"></ion-icon> Support Me
           </button>
         </div>
-        <div style={{ display: "flex", gap: "4rem" }}>
+        <div
+          // style={{ display: "flex", gap: "4rem" }}
+          className={styles.contactContiner}
+        >
           <MyAccounts />
 
           <ContactForm />

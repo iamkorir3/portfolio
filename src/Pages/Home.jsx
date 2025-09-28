@@ -4,6 +4,8 @@ import styles from "./Home.module.css";
 import Aboutcompo from "../components/Aboutcompo";
 import Myprojects from "../components/Myprojects";
 import Myskills from "../components/Myskills";
+import Mytestimonial from "../components/Mytestimonial";
+import ContactMe from "../components/ContactMe";
 
 function Home() {
   return (
@@ -13,6 +15,8 @@ function Home() {
       <Aboutcompo />
       <Myprojects />
       <Myskills />
+      <Mytestimonial />
+      <ContactMe />
     </div>
   );
 }
