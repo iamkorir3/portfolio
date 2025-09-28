@@ -8,7 +8,7 @@ export default function Navigation() {
   }
   return (
     <div className={styles.container}>
-      <p to="">
+      <p style={{ margin: 0 }}>
         <ion-icon name="code-slash"></ion-icon> My Portfolio{" "}
       </p>
       <button onClick={handleNav}>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Mytestimonial.module.css";
 
 export default function Mytestimonial() {
@@ -81,12 +81,12 @@ function PersonCard({ person }) {
   // let testnames = testname[0].join("");
   let firstnname = testname[0].toUpperCase();
   let secondletter = testname[1].toUpperCase();
-  console.log(testname[0]);
-  console.log(testname[1]);
-  console.log(firstnname[1]);
-  let firstname = firstnname.split("").map((word) => word[0]);
-  console.log(firstname[0]);
-  console.log(firstname[1]);
+  // console.log(testname[0]);
+  // console.log(testname[1]);
+  // console.log(firstnname[1]);
+  // let firstname = firstnname.split("").map((word) => word[0]);
+  // console.log(firstname[0]);
+  // console.log(firstname[1]);
   // let firstname = name[0][0].[0];
   // let firstname = name[0][1];
   // let firstletter = firstname[0];
@@ -135,36 +135,30 @@ function Form({ onsubmit, cancel }) {
     testimony: "",
   });
 
+  useEffect(
+    function () {
+      setmytestifier({
+        ...mytestifier,
+        name: myname,
+        email: myemail,
+        position: myposition,
+        testimony: mytestimony,
+      });
+    },
+    [mytestimony]
+  );
+
   function handleName(value) {
     setname(value);
-    setmytestifier({
-      ...mytestifier,
-      name: myname,
-    });
-
-    console.log(mytestifier);
   }
   function handleEmail(value) {
     setemail(value);
-    setmytestifier({
-      ...mytestifier,
-      email: myemail,
-    });
   }
   function handlepos(value) {
     setpos(value);
-    setmytestifier({
-      ...mytestifier,
-      position: myposition,
-    });
   }
   function handletestimony(value) {
     settestimony(value);
-    setmytestifier({
-      ...mytestifier,
-      testimony: value,
-    });
-    console.log(mytestifier.testimony);
   }
 
   function handleSubmision(e) {
@@ -185,17 +179,19 @@ function Form({ onsubmit, cancel }) {
       position: myposition,
       testimony: mytestimony,
     });
+
     onsubmit(mytestifier);
     console.log(mytestifier);
     console.log({ myname, myemail });
     cancel();
   }
+
   return (
     <>
       <div className={styles.form}>
         <div className={styles.formHeader}>
           {/* <h2>💡</h2> */}
-          <h3>Share Your Testimony</h3>
+          <h3 style={{ color: "black" }}>Share Your Testimony</h3>
           <p>Comment on your experience working with me.</p>
         </div>
         <form className={styles.myform} onSubmit={(e) => handleSubmision(e)}>
