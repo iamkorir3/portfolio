@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Mytestimonial.module.css";
+import StarRating from "./Rating";
 
 export default function Mytestimonial() {
   const [testifiers, setTestifier] = useState([
@@ -227,6 +228,7 @@ function Form({ onsubmit, cancel }) {
               onChange={(e) => handletestimony(e.target.value)}
             />
           </div>
+          <StarRating />
           <div className={styles.formBtn}>
             <button onClick={cancel}>Cancel</button>
             <button type="submit">Submit</button>

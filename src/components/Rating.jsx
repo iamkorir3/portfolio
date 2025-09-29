@@ -1,14 +1,18 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+// import styles from "./Mytestimonial.module.css";
 
 const containerStyle = {
   display: "flex",
+  flexDirection: "row",
   alignItems: "center",
   gap: "16px",
+  marginBottom: "2rem",
 };
 
 const starContainerStyle = {
   display: "flex",
+  flexDirection: "row",
 };
 
 StarRating.propTypes = {
@@ -24,8 +28,8 @@ StarRating.propTypes = {
 export default function StarRating({
   maxRating = 5,
   color = "#fcc419",
-  size = 48,
-  className = "",
+  size = 40,
+  //   className = "",
   messages = [],
   defaultRating = 0,
   onSetRating,
@@ -47,7 +51,7 @@ export default function StarRating({
   };
 
   return (
-    <div style={containerStyle} className={className}>
+    <div style={containerStyle}>
       <div style={starContainerStyle}>
         {Array.from({ length: maxRating }, (_, i) => (
           <Star
