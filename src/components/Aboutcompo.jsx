@@ -41,17 +41,7 @@ function InfoMe() {
             design sense with technical logic.
           </p>
         </div>
-        {/* <div>
-          <h2>
-            <ion-icon name="information-outline"></ion-icon> Who Am I
-          </h2>
-          <p>
-            I am a frontend developer who crafts responsive, interactive and
-            clean UIs. <br></br>
-            With a background in Computer Technology (still student). i blend
-            design sense with technical logic.
-          </p>
-        </div> */}
+
         <div>
           <h2>
             <ion-icon name="bulb-outline"></ion-icon> My Approach
