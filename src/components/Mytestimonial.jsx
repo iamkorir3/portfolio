@@ -79,19 +79,8 @@ function PersonCard({ person }) {
   const { name, position, testimony } = person;
 
   let testname = name.split(/\s+/);
-  // let testnames = testname[0].join("");
   let firstnname = testname[0].toUpperCase();
   let secondletter = testname[1].toUpperCase();
-  // console.log(testname[0]);
-  // console.log(testname[1]);
-  // console.log(firstnname[1]);
-  // let firstname = firstnname.split("").map((word) => word[0]);
-  // console.log(firstname[0]);
-  // console.log(firstname[1]);
-  // let firstname = name[0][0].[0];
-  // let firstname = name[0][1];
-  // let firstletter = firstname[0];
-  // let secondletter = firstname[0];
 
   return (
     <div className={styles.personCard}>
@@ -188,7 +177,7 @@ function Form({ onsubmit, cancel }) {
   }
 
   return (
-    <>
+    <div className={styles.formContainer}>
       <div className={styles.form}>
         <div className={styles.formHeader}>
           {/* <h2>💡</h2> */}
@@ -235,6 +224,6 @@ function Form({ onsubmit, cancel }) {
           </div>
         </form>
       </div>
-    </>
+    </div>
   );
 }

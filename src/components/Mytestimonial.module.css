@@ -106,12 +106,15 @@
 }
 
 /* Testimonial Form */
-
+.formContainer {
+  position: relative;
+  background-color: blueviolet;
+}
 .form {
   position: absolute;
   left: 37.5%;
-  top: 25vh;
-  width: 25%;
+  top: -75vh;
+  width: 30%;
   margin: 0 auto;
   height: fit-content;
   background-color: whitesmoke;
@@ -216,9 +219,14 @@ h3 {
     background-color: white;
   }
 
+  .formContainer {
+    position: relative;
+  }
+
   .form {
     position: absolute;
     left: 7.5%;
+    top: 25vh;
     top: 25vh;
     width: 85%;
     margin: 0 auto;

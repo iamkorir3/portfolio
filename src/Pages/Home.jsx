@@ -12,11 +12,13 @@ function Home() {
     <div className={styles.container}>
       <Navigation />
       <Homepage />
-      <Aboutcompo />
-      <Myprojects />
-      <Myskills />
-      <Mytestimonial />
-      <ContactMe />
+      <div className={styles.mobile}>
+        <Aboutcompo />
+        <Myprojects />
+        <Myskills />
+        <Mytestimonial />
+        <ContactMe />
+      </div>
     </div>
   );
 }
