@@ -214,6 +214,7 @@ CONTACT FORM
     display: flex;
     flex-direction: column;
     margin-top: 8rem;
+    margin-bottom: 4rem;
   }
 
   .contactContiner {

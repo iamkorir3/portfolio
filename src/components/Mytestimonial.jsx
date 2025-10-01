@@ -85,7 +85,7 @@ function PersonCard({ person }) {
   return (
     <div className={styles.personCard}>
       <div className={styles.review}>
-        <h3>
+        <h3 style={{ color: "black" }}>
           <ion-icon name="chatbubble-ellipses-outline"></ion-icon> Testimony
         </h3>
         <p>{testimony}</p>
