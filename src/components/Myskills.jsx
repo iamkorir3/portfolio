@@ -26,12 +26,22 @@ const skills = [
     time: "6 months + Experience",
     color: "",
   },
-  { name: "C", strength: 10, logo: <p>C</p>, time: "1 year + Experience" },
-  { name: "C++", strength: 10, logo: <p>C++</p>, time: "1 year + Experience" },
+  {
+    name: "C",
+    strength: 10,
+    logo: <span>C</span>,
+    time: "1 year + Experience",
+  },
+  {
+    name: "C++",
+    strength: 10,
+    logo: <span>C++</span>,
+    time: "1 year + Experience",
+  },
   {
     name: "JAVA",
     strength: 10,
-    logo: <p>🍵</p>,
+    logo: <span>🍵</span>,
     time: "6 months + Experience",
   },
 ];

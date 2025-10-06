@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Mytestimonial.module.css";
 import StarRating from "./Rating";
 
+import { supabase } from "../supabaseClient";
 export default function Mytestimonial() {
   const [testifiers, setTestifier] = useState([
     {
@@ -47,8 +48,8 @@ export default function Mytestimonial() {
 }
 
 function TestimonialCard({ testifiers }) {
-  console.log(testifiers);
-  console.log(testifiers[0]);
+  // console.log(testifiers);
+  // console.log(testifiers[0]);
   // const [testing, set]
 
   return (
@@ -76,6 +77,23 @@ function AddTestimonial({ onAddtest }) {
 }
 
 function PersonCard({ person }) {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  async function fetchData() {
+    const { data, error } = await supabase.from("Testimonies").select("*");
+
+    if (!error) {
+      setData(data);
+      console.log(data);
+    } else {
+      console.log("still error", error);
+    }
+  }
+  console.log(data);
   const { name, position, testimony } = person;
 
   let testname = name.split(/\s+/);
