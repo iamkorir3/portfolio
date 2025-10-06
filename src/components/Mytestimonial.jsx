@@ -3,6 +3,7 @@ import styles from "./Mytestimonial.module.css";
 import StarRating from "./Rating";
 
 import { supabase } from "../supabaseClient";
+
 export default function Mytestimonial() {
   const [testifiers, setTestifier] = useState([
     {
@@ -48,13 +49,37 @@ export default function Mytestimonial() {
 }
 
 function TestimonialCard({ testifiers }) {
-  // console.log(testifiers);
-  // console.log(testifiers[0]);
-  // const [testing, set]
+  console.log(testifiers);
+
+  const [data, setData] = useState([]);
+  const [mp, setMp] = useState({});
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  async function fetchData() {
+    const { data, error } = await supabase.from("Testimonies").select("*");
+
+    if (!error) {
+      setData(data);
+      data.map((perso) => createTestifier(perso));
+
+      console.log(data);
+    } else {
+      console.log("still error", error);
+    }
+  }
+
+  function createTestifier(perso) {
+    const { name, position, testimony } = perso;
+    setMp({ ...mp, name, position, testimony });
+  }
+
+  // const { name, position, testimony } = mp;
 
   return (
     <div className={styles.tesiCard}>
-      {testifiers.map((person, index) => (
+      {data.map((person, index) => (
         <PersonCard person={person} key={index} />
       ))}
       ;
@@ -77,28 +102,11 @@ function AddTestimonial({ onAddtest }) {
 }
 
 function PersonCard({ person }) {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  async function fetchData() {
-    const { data, error } = await supabase.from("Testimonies").select("*");
-
-    if (!error) {
-      setData(data);
-      console.log(data);
-    } else {
-      console.log("still error", error);
-    }
-  }
-  console.log(data);
   const { name, position, testimony } = person;
 
-  let testname = name.split(/\s+/);
-  let firstnname = testname[0].toUpperCase();
-  let secondletter = testname[1].toUpperCase();
+  // let testname = name.split(/\s+/);
+  // let firstnname = testname[0].toUpperCase();
+  // let secondletter = testname[1].toUpperCase();
 
   return (
     <div className={styles.personCard}>
@@ -111,8 +119,9 @@ function PersonCard({ person }) {
       </div>
       <div className={styles.testifier}>
         <div className={styles.nameInitials}>
-          {firstnname[0]}
-          {secondletter[0]}
+          {/* {firstnname[0]} 
+          {secondletter[0]} */}
+          KK
         </div>
         <div>
           <h2>{name}</h2>
@@ -135,7 +144,7 @@ function Form({ onsubmit, cancel }) {
   const [myemail, setemail] = useState("");
   const [myposition, setpos] = useState("");
   const [mytestimony, settestimony] = useState("");
-
+  const [id, setId] = useState(6);
   const [mytestifier, setmytestifier] = useState({
     name: "",
     email: "",
@@ -169,7 +178,7 @@ function Form({ onsubmit, cancel }) {
     settestimony(value);
   }
 
-  function handleSubmision(e) {
+  const handleSubmision = (e) => {
     e.preventDefault();
     if (
       myname === "" ||
@@ -188,11 +197,45 @@ function Form({ onsubmit, cancel }) {
       testimony: mytestimony,
     });
 
+    async function UpdateIdUser() {
+      const { data, error } = await supabase
+        .from("Testimonies")
+        .insert([
+          {
+            id: id + 1,
+            name: myname,
+            email: myemail,
+            position: myposition,
+            testimony: mytestimony,
+          },
+        ])
+        .select();
+
+      if (error) {
+        // alert("Error submitting testimony: " + error.message);
+        setId(id + 1);
+        console.log(error.message);
+      } else {
+        alert("Testimony submitted successfully!");
+        setname("");
+        settestimony("");
+        setpos("");
+        setemail(5);
+        setId(id + 1);
+      }
+      console.log(data);
+    }
+
+    UpdateIdUser();
+
     onsubmit(mytestifier);
+
     console.log(mytestifier);
     console.log({ myname, myemail });
     cancel();
-  }
+  };
+
+  console.log(id);
 
   return (
     <div className={styles.formContainer}>
