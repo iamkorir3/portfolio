@@ -144,7 +144,7 @@ function Form({ onsubmit, cancel }) {
   const [myemail, setemail] = useState("");
   const [myposition, setpos] = useState("");
   const [mytestimony, settestimony] = useState("");
-  const [id, setId] = useState(6);
+  // const [id, setId] = useState(6);
   const [mytestifier, setmytestifier] = useState({
     name: "",
     email: "",
@@ -199,7 +199,7 @@ function Form({ onsubmit, cancel }) {
         .from("Testimonies")
         .insert([
           {
-            id,
+            // id,
             name: myname,
             email: myemail,
             position: myposition,
@@ -210,7 +210,7 @@ function Form({ onsubmit, cancel }) {
 
       if (error) {
         // alert("Error submitting testimony: " + error.message);
-        setId(id + 1);
+        // setId(id + 1);
         console.log(error.message);
       } else {
         alert("Testimony submitted successfully!");
@@ -218,7 +218,7 @@ function Form({ onsubmit, cancel }) {
         settestimony("");
         setpos("");
         setemail(5);
-        setId(id + 1);
+        // setId(id + 1);
       }
       console.log(data);
     }
@@ -232,7 +232,7 @@ function Form({ onsubmit, cancel }) {
     cancel();
   };
 
-  console.log(id);
+  // console.log(id);
 
   return (
     <div className={styles.formContainer}>

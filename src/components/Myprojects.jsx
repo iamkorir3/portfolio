@@ -19,7 +19,7 @@ function Projects() {
       <>
         <ProjectCard>
           <p></p>
-          <h2>WorldWise</h2>
+          <h2 style={{ color: "black" }}>WorldWise</h2>
           <img
             className={styles.projectImg}
             src="worldwise.png"
@@ -34,7 +34,7 @@ function Projects() {
         </ProjectCard>
         <ProjectCard>
           <p></p>
-          <h2>Ecommerce</h2>
+          <h2 style={{ color: "black" }}>Ecommerce</h2>
           <img className={styles.projectImg} src="usepop.png" alt="worlwiis" />
           <div className={styles.projectLinks}>
             <a href="https://github.com/iamkorir3/Use-popcorn"> {"</>"} Code</a>
@@ -43,7 +43,7 @@ function Projects() {
         </ProjectCard>
         <ProjectCard>
           <p></p>
-          <h2>UsePopcorn</h2>
+          <h2 style={{ color: "black" }}>UsePopcorn</h2>
           <img
             className={styles.projectImg}
             src="worldwise.png"
@@ -56,7 +56,7 @@ function Projects() {
         </ProjectCard>
         <ProjectCard>
           <p></p>
-          <h2>React Quiz</h2>
+          <h2 style={{ color: "black" }}>React Quiz</h2>
           <img
             className={styles.projectImg}
             src="worldwise.png"
@@ -67,7 +67,7 @@ function Projects() {
             <a href="https://github.com/iamkorir3/Use-popcorn">🚀Live</a>
           </div>
         </ProjectCard>
-        <ProjectCard>
+        {/* <ProjectCard>
           <p></p>
           <h2>Eat and Split</h2>
           <img
@@ -92,7 +92,7 @@ function Projects() {
             <a href="https://github.com/iamkorir3/Use-popcorn">{"</>"} Code</a>
             <a href="https://github.com/iamkorir3/Use-popcorn">🚀Live</a>
           </div>
-        </ProjectCard>
+        </ProjectCard> */}
       </>
     </div>
   );
