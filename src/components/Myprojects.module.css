@@ -120,7 +120,7 @@ MEDIA QUERRY
 @media (max-width: 400px) {
   .container {
     width: 90%;
-    height: 80vh;
+    height: fit-content;
     margin: 0 auto;
     margin-top: 4rem;
     /* overflow-y: scroll; */

@@ -19,52 +19,44 @@ function Projects() {
       <>
         <ProjectCard>
           <p></p>
-          <h2 style={{ color: "black" }}>WorldWise</h2>
+          <h2 style={{ color: "white" }}>WorldWise</h2>
           <img
             className={styles.projectImg}
             src="worldwise.png"
             alt="worlwiis"
           />
           <div className={styles.projectLinks}>
-            <a href="https://use-popcorn-henna-eta.vercel.app/">{"</>"}Code</a>
-            <a href="https://use-popcorn-henna-eta.vercel.app/">
+            <a href="https://github.com/iamkorir3/Worldwise.git">{"</>"}Code</a>
+            <a href="">
               <ion-icon name="link-outline"></ion-icon> Live
             </a>
           </div>
         </ProjectCard>
         <ProjectCard>
           <p></p>
-          <h2 style={{ color: "black" }}>Ecommerce</h2>
-          <img className={styles.projectImg} src="usepop.png" alt="worlwiis" />
+          <h2 style={{ color: "white" }}>Ecommerce</h2>
+          <img className={styles.projectImg} src="uspop.png" alt="worlwiis" />
           <div className={styles.projectLinks}>
             <a href="https://github.com/iamkorir3/Use-popcorn"> {"</>"} Code</a>
-            <a href="https://ecommerce-kappa-one-67.vercel.app/">🚀Live</a>
+            <a href="">🚀Live</a>
           </div>
         </ProjectCard>
         <ProjectCard>
           <p></p>
-          <h2 style={{ color: "black" }}>UsePopcorn</h2>
-          <img
-            className={styles.projectImg}
-            src="worldwise.png"
-            alt="worlwiis"
-          />
+          <h2 style={{ color: "white" }}>UsePopcorn</h2>
+          <img className={styles.projectImg} src="usepop.png" alt="worlwiis" />
           <div className={styles.projectLinks}>
             <a href="https://github.com/iamkorir3/Use-popcorn">{"</>"} Code</a>
-            <a href="https://github.com/iamkorir3/Use-popcorn">🚀Live</a>
+            <a href="https://use-popcorn-henna-eta.vercel.app/">🚀Live</a>
           </div>
         </ProjectCard>
         <ProjectCard>
           <p></p>
-          <h2 style={{ color: "black" }}>React Quiz</h2>
-          <img
-            className={styles.projectImg}
-            src="worldwise.png"
-            alt="worlwiis"
-          />
+          <h2 style={{ color: "white" }}>React Quiz</h2>
+          <img className={styles.projectImg} src="" alt="worlwiis" />
           <div className={styles.projectLinks}>
             <a href="https://github.com/iamkorir3/Use-popcorn">{"</>"} Code</a>
-            <a href="https://github.com/iamkorir3/Use-popcorn">🚀Live</a>
+            <a href="">🚀Live</a>
           </div>
         </ProjectCard>
         {/* <ProjectCard>
