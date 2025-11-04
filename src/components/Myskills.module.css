@@ -27,8 +27,9 @@
 }
 
 .Myskillss {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: 1fr 1fr 1fr; */
   gap: 2rem;
 }
 .skill {
@@ -54,7 +55,8 @@
 
 .skillHead {
   display: flex;
-  width: 60%;
+  flex-direction: column;
+  width: 100%;
   padding: 1rem;
   justify-content: space-between;
 }
@@ -86,8 +88,10 @@ h3 {
     gap: 5rem;
   }
   .Myskillss {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
     margin: 0 auto;
     margin-left: 1rem;
@@ -96,11 +100,40 @@ h3 {
 
   .skill {
     height: 18rem;
-    max-width: 26rem;
+    /* max-width: 26rem; */
+    width: 90%;
     background-color: rgb(240, 239, 239);
-    background-color: rgb(25, 25, 51);
+    background-color: rgb(42, 42, 94);
     text-align: center;
     border-radius: 8px;
+  }
+
+  .skillspar {
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 1rem;
+    gap: 1rem;
+    align-items: center;
+  }
+  .skillHead h3 {
+    font-size: 2.5rem !important;
+    text-align: start;
+    color: rgb(71, 96, 209);
+    color: var(--color-cyan-400);
+    color: aqua;
+    margin-bottom: 0.5rem;
+  }
+  .skillHead p {
+    font-size: 2rem !important;
+    text-align: start;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+  }
+  .skillspar p {
+    font-size: 1.8rem !important;
+    background-color: rgb(24, 24, 71);
+    padding: 0.8rem 1rem;
+    margin: 0;
   }
 
   .codepic {

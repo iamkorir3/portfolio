@@ -4,13 +4,13 @@ const skills = [
   {
     title: "Frontend",
     text: "Client-side development",
-    skils: ["React JS", "HTML5 & CSS3", "Next JS", "Tailwind CSS"],
+    skils: ["React", "HTML5", "CSS3", "Next JS", "Tailwind CSS"],
   },
 
   {
     title: "Backend",
     text: "Sever-side development",
-    skils: ["Node JS", "Express JS", "MongoDB", "Supabase"],
+    skils: ["MongoDB", "Supabase"],
   },
 
   {
@@ -52,15 +52,23 @@ function Skiils() {
 }
 
 function SkillCard({ skill }) {
-  const { name, strength, logo, time, color } = skill;
+  const { text, title, skils } = skill;
   return (
     <div className={styles.skill}>
       <div className={styles.skillHead}>
-        <p style={{ color: color }}>{logo}</p>
-        <h3>{name}</h3>
+        <h3>{title}</h3>
+        <p>{text}</p>
+        <div
+          style={{ display: "flex", rowGap: "2rem" }}
+          className={styles.skillspar}
+        >
+          {skils.map((myskill, idx) => (
+            <p key={idx} style={{ color: "white", fontSize: "1.5rem" }}>
+              {myskill}
+            </p>
+          ))}
+        </div>
       </div>
-      <p style={{ color: "white", fontSize: "2rem" }}>{time}</p>
-      <div>{strength}</div>
     </div>
   );
 }
