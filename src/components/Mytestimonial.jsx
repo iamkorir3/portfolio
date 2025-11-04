@@ -152,15 +152,19 @@ function Form({ onsubmit, cancel }) {
     testimony: "",
   });
 
-  useEffect(function () {
-    setmytestifier({
-      ...mytestifier,
-      name: myname,
-      email: myemail,
-      position: myposition,
-      testimony: mytestimony,
-    });
-  }, []);
+  useEffect(
+    function () {
+      setmytestifier({
+        ...mytestifier,
+        name: myname,
+        email: myemail,
+        position: myposition,
+        testimony: mytestimony,
+      });
+    },
+    []
+    // [myname, myemail, myposition, mytestimony, mytestifier]
+  );
 
   function handleName(value) {
     setname(value);
@@ -199,7 +203,6 @@ function Form({ onsubmit, cancel }) {
         .from("Testimonies")
         .insert([
           {
-            // id,
             name: myname,
             email: myemail,
             position: myposition,

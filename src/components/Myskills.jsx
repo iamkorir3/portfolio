@@ -2,47 +2,21 @@ import styles from "./Myskills.module.css";
 
 const skills = [
   {
-    name: "HTML5",
-    strength: 10,
-    logo: <ion-icon color="red" name="logo-html5"></ion-icon>,
-    time: "1 year + Experience",
+    title: "Frontend",
+    text: "Client-side development",
+    skils: ["React JS", "HTML5 & CSS3", "Next JS", "Tailwind CSS"],
   },
+
   {
-    name: "CSS3",
-    strength: 10,
-    logo: <ion-icon color="purple" name="logo-css3"></ion-icon>,
-    time: "1 year + Experience",
+    title: "Backend",
+    text: "Sever-side development",
+    skils: ["Node JS", "Express JS", "MongoDB", "Supabase"],
   },
+
   {
-    name: "  JAVASCRIPT",
-    strength: 10,
-    logo: <ion-icon color="yellow" name="logo-javascript"></ion-icon>,
-    time: "3/4 year + Experience",
-  },
-  {
-    name: "REACT",
-    strength: 10,
-    logo: <ion-icon color="blue" name="logo-react"></ion-icon>,
-    time: "6 months + Experience",
-    color: "",
-  },
-  {
-    name: "C",
-    strength: 10,
-    logo: <span>C</span>,
-    time: "1 year + Experience",
-  },
-  {
-    name: "C++",
-    strength: 10,
-    logo: <span>C++</span>,
-    time: "1 year + Experience",
-  },
-  {
-    name: "JAVA",
-    strength: 10,
-    logo: <span>🍵</span>,
-    time: "6 months + Experience",
+    title: "Tools & Platforms",
+    text: "Development tools",
+    skils: ["Git", "Github ", " VS Code", "Intellij ide", "Vercel"],
   },
 ];
 
