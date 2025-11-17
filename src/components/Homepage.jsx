@@ -28,18 +28,18 @@ function Mydetails() {
       <SocialProfiles />
 
       <div className={styles.ctaBtn}>
-        <button>
+        <a href="code.jpg" download>
           <span>
             <ion-icon name="caret-down-circle"></ion-icon>
-          </span>{" "}
+          </span>
           Explore My Projects
-        </button>
-        <button>
+        </a>{" "}
+        <a>
           <span>
             <ion-icon name="mail"></ion-icon>
           </span>{" "}
           Download my CV
-        </button>
+        </a>
       </div>
 
       <div className={styles.quickStats}>
@@ -131,4 +131,3 @@ function PictureSkills() {
     </div>
   );
 }
-
