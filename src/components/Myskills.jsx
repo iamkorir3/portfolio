@@ -63,7 +63,7 @@ function SkillCard({ skill }) {
           className={styles.skillspar}
         >
           {skils.map((myskill, idx) => (
-            <p key={idx} style={{ color: "white", fontSize: "1.5rem" }}>
+            <p key={idx} style={{ color: "white", fontSize: "1.5rem" }} className={styles.skillitem}>
               {myskill}
             </p>
           ))}

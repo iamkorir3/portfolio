@@ -22,24 +22,28 @@
 
 .skillcontainer {
   display: flex;
-  justify-content: space-between;
+  width: fit-content;
+  /* justify-content: space-between; */
   gap: 5rem;
 }
 
 .Myskillss {
-  display: flex;
-  flex-direction: column;
-  /* grid-template-columns: 1fr 1fr 1fr; */
+  display: grid;
+
+  /* flex-direction: column; */
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 .skill {
   height: 24rem;
   width: 40rem;
-  background-color: rgb(236, 233, 233);
-  /* background-color: rgb(25, 25, 51); */
-
+  background-color: rgb(25, 25, 51);
+  background-color: rgb(42, 42, 94);
   text-align: center;
   border-radius: 8px;
+  /* display: flex; */
 }
 
 .codepic {
@@ -59,6 +63,7 @@
   width: 100%;
   padding: 1rem;
   justify-content: space-between;
+  align-items: center;
 }
 
 .skillHead p,
@@ -69,6 +74,39 @@ h3 {
 
 .skillHead p ion-icon {
   font-size: 3.2rem;
+}
+
+.skillspar {
+  /* display: grid;
+  grid-template-columns: repeat(4 (1fr));
+  grid-template-columns: (1fr, 1fr, 1fr, 1fr); */
+  margin-top: 1rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.skillitem {
+  width: fit-content;
+  border-radius: 1rem;
+}
+
+.skillHead h3 {
+  font-size: 2.5rem !important;
+  text-align: start;
+  color: aqua;
+  margin-bottom: 0.5rem;
+}
+.skillHead p {
+  font-size: 2rem !important;
+  text-align: start;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+}
+.skillspar p {
+  font-size: 1.8rem !important;
+  background-color: rgb(24, 24, 71);
+  padding: 0.8rem 1rem;
+  margin: 0;
 }
 
 @media (max-width: 400px) {
@@ -118,8 +156,6 @@ h3 {
   .skillHead h3 {
     font-size: 2.5rem !important;
     text-align: start;
-    color: rgb(71, 96, 209);
-    color: var(--color-cyan-400);
     color: aqua;
     margin-bottom: 0.5rem;
   }
